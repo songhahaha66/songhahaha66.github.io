@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>一些题目记录整理 | songhahaha的个人博客</title>
+    <meta name="author" content="songhahaha" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>SONGHAHAHA的个人博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SONGHAHAHA的个人博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>一些题目记录整理</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/7
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="主站题目"><a href="#主站题目" class="headerlink" title="主站题目"></a>主站题目</h1><span id="more"></span>
+
+<h2 id="easy-py-cpython-38"><a href="#easy-py-cpython-38" class="headerlink" title="easy_py.cpython-38"></a>easy_py.cpython-38</h2><p>注意线程1执行的时候对flag的修改不会似乎同步到线程2，线程2异或的下一个值仍为修改前的值。</p>
+<pre><code class="python">Happy = [44, 100, 3, 50, 106, 90, 5, 102, 10, 112]
+result = [0]*10
+for i in range(9,-1,-2):
+    result[i]=Happy[i] ^ i
+
+for i in range(8,-2,-2):
+    result[i]=Happy[i] ^ Happy[i+1]
+
+for i in range(0,10):
+    print(chr(result[i]),end=&quot;&quot;)
+</code></pre>
+<h2 id="输入flag以获取flag"><a href="#输入flag以获取flag" class="headerlink" title="输入flag以获取flag"></a>输入flag以获取flag</h2><p>观察发现是Electron，搜一下Electron逆向</p>
+<pre><code>npm install asar -g
+cd apps
+asar extract app.asar app //解压拿到源码
+asar pack app app.asar //重新打包
+</code></pre>
+<p>就可以拿到源码。然后分析。</p>
+<p>但是文件有main.jsc，无法直接查看。发现program.js中含有信息。使用bytenode进行编译，网上搜索不断尝试，还是没能复原</p>
+<p>后来继续搜索看见了两位学长的wp<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241204152325826.png" alt="image-20241204152325826"></p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241204162510212.png" alt="image-20241204162510212"></p>
+<p>两次题目似乎有些许区别，SSSCTF2024应该加了一个联网获取ip的判断</p>
+<p>看来之前尝试逆向main.jsc思路可能不太行，跟着学长博客复现了一遍</p>
+<p>先hook一下加密方法，获取一下原文</p>
+<pre><code>const &#123; Hash &#125; = require(&#39;crypto&#39;);
+const _update = Hash.prototype.update;
+Hash.prototype.update = function (...args) &#123;
+    console.log(&#39;Hash update&#39;, args);
+    return _update.apply(this, args);
+&#125;
+</code></pre>
+<p>改一下host，再写一个小程序返回数据</p>
+<pre><code class="python">from flask import Flask, request, jsonify
+json = &#123;&quot;status&quot;: &quot;success&quot;,
+    &quot;country&quot;: &quot;China&quot;,
+    &quot;countryCode&quot;: &quot;CN&quot;,
+    &quot;region&quot;: &quot;TT&quot;,
+    &quot;regionName&quot;: &quot;Tianting&quot;,
+    &quot;city&quot;: &quot;NanTianMen&quot;,
+    &quot;zip&quot;: &quot;&quot;,
+    &quot;lat&quot;: 38.8804,
+    &quot;lon&quot;: 121.529,
+    &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+    &quot;as&quot;: &quot;AS4538 China Education and Research Network Center&quot;,
+    &quot;query&quot;: &quot;210.30.97.133&quot;&#125;
+
+app = Flask(__name__)
+#/json
+@app.route(&#39;/json/&#39;, methods=[&#39;GET&#39;])
+def get_json():
+    return jsonify(json)
+#run
+if __name__ == &#39;__main__&#39;:
+    app.run(host=&#39;127.0.0.1&#39;, port=80)
+</code></pre>
+<h2 id="myFor"><a href="#myFor" class="headerlink" title="myFor"></a>myFor</h2><p>输入一个矩阵，程序会返回自己输入数据加密后对应值跟理想数据，直接爆破</p>
+<pre><code>1 2 3 4 5 6
+1 2 3 4 5 6
+1 2 3 4 5 6
+1 2 3 4 5 6
+1 2 3 4 5 6
+1 2 3 4 5 6
+</code></pre>
+<h2 id="ezex"><a href="#ezex" class="headerlink" title="ezex"></a>ezex</h2><p>异常处理。<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206125454569.png" alt="image-20241206125454569"></p>
+<p>我是修改了ida跳转逻辑，让ida可以分析异常处理的代码</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206125528393.png" alt="image-20241206125528393"></p>
+<p>大意是是奇偶数分别异或。写出解密脚本</p>
+<pre><code class="python">Buf2 =[0]*28
+Buf2[0] = 341250117
+Buf2[1] = 142350161
+Buf2[2] = 542393405
+Buf2[3] = 926947173
+Buf2[4] = 962408270
+Buf2[5] = 592914762
+Buf2[6] = 456790650
+Buf2[7] = 0x413c
+str = bytearray()
+for i in Buf2:
+    str.extend(i.to_bytes(4, &#39;little&#39;))
+for a in range(30, -1, -1):
+    if a%2==0:
+        str[a]^=a+1
+    else:
+        str[a]^=str[(a-1)%len(str)]
+print(str)
+&#39;&#39;&#39;DUTCTF&#123;t4y_thrOw_aNd_c@tch!!!&#125;&#39;&#39;&#39;
+</code></pre>
+<h2 id="ezre1"><a href="#ezre1" class="headerlink" title="ezre1"></a>ezre1</h2><p>main函数那个解密后是假的flag</p>
+<p>后来继续看代码发现一个疑似加密的地方</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206144749830.png" alt="image-20241206144749830"></p>
+<p>疑似这里才是真正的加密部分，尝试写一个解密脚本。</p>
+<p>其中</p>
+<pre><code>  if ( rand() % 2 )
+      s[i] = ~(s[i] &amp; s[(i + 1) % v3]) &amp; (s[(i + 1) % v3] | s[i]);
+    else
+      s[i] = (s[i] ^ s[(i - 1) % v3]) + 2 * (s[i] &amp; s[(i - 1) % v3]);
+</code></pre>
+<p>这部分逆向操作需要注意一下。</p>
+<p>当rand为奇数时，</p>
+<h2 id="Game！"><a href="#Game！" class="headerlink" title="Game！"></a>Game！</h2><p>shift+f12查看字符串，然后定位到疑似解密部分</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206230850359.png" alt="image-20241206230850359"></p>
+<p>然后就直接SetIp到这里，随后继续执行，获得flag</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206231009310.png" alt="image-20241206231009310"></p>
+<h1 id="NSSCTF题目"><a href="#NSSCTF题目" class="headerlink" title="NSSCTF题目"></a>NSSCTF题目</h1><!--more-->
+
+<h2 id="GXYCTF-2019-luck-guy"><a href="#GXYCTF-2019-luck-guy" class="headerlink" title="[GXYCTF 2019]luck_guy"></a>[GXYCTF 2019]luck_guy</h2><p>动态调试就可以，把流程走一遍</p>
+<p>GXY{do_not_hate_me}</p>
+<h2 id="HZNUCTF-2023-final-虽然他送了我玫瑰花"><a href="#HZNUCTF-2023-final-虽然他送了我玫瑰花" class="headerlink" title="[HZNUCTF 2023 final]虽然他送了我玫瑰花"></a>[HZNUCTF 2023 final]虽然他送了我玫瑰花</h2><p>花指令</p>
+<pre><code>text:0040114D                 xor     ebx, ebx
+.text:0040114F                 test    ebx, ebx
+.text:00401151                 jnz     short near ptr byte_401155
+.text:00401153                 jz      short loc_401156
+</code></pre>
+<p>ebx肯定为0，所以nop掉jnz，然后把jz换成jmp</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241223170127109.png" alt="image-20241223170127109"></p>
+<p>输入数据进不同函数异或。</p>
+<p>解密脚本如下：</p>
+<pre><code class="python">arr = [ 127, 126,  81, 206, 251,  78, 122,  36, 232, 223,
+   89, 113,  38, 202, 225, 108, 134,  33, 204, 245,
+   40, 113,  20, 216, 239, 110, 119,  98, 250]
+for i in range(len(arr)):
+    aa = i%5
+    if aa==0:
+        arr[i] = arr[i]^0x19
+    elif aa==1:
+        arr[i] = arr[i]-18
+    elif aa==2:
+        arr[i] = arr[i]+16
+    elif aa==3:
+        for cc in range(3):
+            arr[i] = arr[i]/2+0x7f*cc
+            if 32&lt;=arr[i]&lt;=126:
+                break
+    elif aa==4:
+        for cc in range(3):
+            arr[i] = ~(arr[i]+0x80*cc)
+            if 32&lt;=arr[i]&lt;=126:
+                break
+print(len(arr))
+for i in range(len(arr)):
+    print(chr(int(arr[i])&amp;0xff), end=&#39;&#39;)
+</code></pre>
+<h2 id="SWPUCTF-2021-新生赛-老鼠走迷宫（主站BabyMaze）"><a href="#SWPUCTF-2021-新生赛-老鼠走迷宫（主站BabyMaze）" class="headerlink" title="[SWPUCTF 2021 新生赛]老鼠走迷宫（主站BabyMaze）"></a>[SWPUCTF 2021 新生赛]老鼠走迷宫（主站BabyMaze）</h2><h3 id="Pyc反编译"><a href="#Pyc反编译" class="headerlink" title="Pyc反编译"></a>Pyc反编译</h3><p>用pyinstxtractor对程序处理，得到5.pyc，随后用<a target="_blank" rel="noopener" href="http://www.pylingual.io进行反编译,但是得到代码不完整,随后使用uncompyle6,却得到了完整的代码.(奇奇怪怪/">www.pylingual.io进行反编译，但是得到代码不完整，随后使用uncompyle6，却得到了完整的代码。（奇奇怪怪</a></p>
+<p>分析代码，发现1为墙壁0为路，要找到最短路径。（搜一下就能解决但是还是假装研究一下吧）</p>
+<h2 id="MoeCTF-2022-chicken-soup"><a href="#MoeCTF-2022-chicken-soup" class="headerlink" title="[MoeCTF 2022]chicken_soup"></a>[MoeCTF 2022]chicken_soup</h2><p>花指令，将两个地方修改一下就可以继续用ida了。<img src="/images/2024-11-06-18-29-54-image.png"></p>
+<p>随后分析对数据加密的两个函数</p>
+<pre><code class="c">unsigned int __cdecl sub_D51080(const char *a1)
+&#123;
+  unsigned int result; // eax
+  unsigned int i; // [esp+18h] [ebp-8h]
+
+  for ( i = 0; ; ++i )
+  &#123;
+    result = i;
+    if ( i &gt;= strlen(a1) )
+      break;
+    a1[i] = (16 * a1[i]) | ((int)(unsigned __int8)a1[i] &gt;&gt; 4);
+  &#125;
+  return result;
+&#125;
+</code></pre>
+<pre><code class="c">void __cdecl sub_D51000(const char *a1)
+&#123;
+  unsigned int i; // [esp+18h] [ebp-8h]
+
+  for ( i = 0; i &lt; strlen(a1) - 1; ++i )
+    a1[i] += a1[i + 1];
+&#125;
+</code></pre>
+<p>先逆向第一个过程，第一个过程将数据左移四位后和右移四位进行或运算。(实际上似乎是将十六进制的数字两位进行了交换，例如0xCD变成了0xDC)，再写一次就可以交换回来。</p>
+<p>第二个过程倒着减一下。</p>
+<p>解密代码：（获取data时使用shift+E可以一键提取）</p>
+<p><img src="/images/2024-11-06-20-00-11-image.png"></p>
+<pre><code class="c">#include &lt;stdio.h&gt;
+int main()&#123;
+    unsigned char data[] = &#123;
+        0xCD, 0x4D, 0x8C, 0x7D, 0xAD, 0x1E, 0xBE, 0x4A,
+        0x8A, 0x7D, 0xBC, 0x7C, 0xFC, 0x2E, 0x2A, 0x79,
+        0x9D, 0x6A, 0x1A, 0xCC, 0x3D, 0x4A, 0xF8, 0x3C,
+        0x79, 0x69, 0x39, 0xD9, 0xDD, 0x9D, 0xA9, 0x69,
+        0x4C, 0x8C, 0xDD, 0x59, 0xE9, 0xD7
+    &#125;;
+    for(int i=0;i&lt;38;i++)&#123;
+        unsigned char b = data[i];
+        data[i] = b&lt;&lt; 4 | (b &gt;&gt; 4);
+    &#125;
+    for(int i=36;i&gt;=0;i--)&#123;
+        data[i] -=data[i+1];
+    &#125;
+    printf(&quot;%s&quot;,data);
+&#125;
+</code></pre>
+<h2 id="NISACTF-2022-string"><a href="#NISACTF-2022-string" class="headerlink" title="[NISACTF 2022]string"></a>[NISACTF 2022]string</h2><p>分析代码，前面好多都是干扰，实际上真正起作用的只有几行</p>
+<pre><code class="c">srand(seed);
+  printf(&quot;NSSCTF&#123;&quot;);
+  for ( m = 0; m &lt; v10; ++m )
+  &#123;
+    v4 = rand();
+    printf(&quot;%d&quot;, (unsigned int)(v4 % 8 + 1));
+  &#125;
+  putchar(125);
+</code></pre>
+<p>有一个小坑是必须要linux写出来的程序得到的才是正确的答案，win的写出来是错的。因为这个rand依赖于libc版本</p>
+<h2 id="HGAME-2023-week1-easyenc"><a href="#HGAME-2023-week1-easyenc" class="headerlink" title="[HGAME 2023 week1]easyenc"></a>[HGAME 2023 week1]easyenc</h2><p>main函数里就有核心代码</p>
+<pre><code class="c">v4 = -1i64;
+  do
+    ++v4;
+  while ( *((_BYTE *)v10 + v4) );
+  if ( v4 == 41 )
+  &#123;
+    while ( 1 )
+    &#123;
+      v5 = (*((_BYTE *)v10 + v3) ^ 0x32) - 86;
+      *((_BYTE *)v10 + v3) = v5;
+      if ( *((_BYTE *)v8 + v3) != v5 )
+        break;
+      if ( ++v3 &gt;= 41 )
+      &#123;
+        v6 = &quot;you are right!&quot;;
+        goto LABEL_8;
+      &#125;
+    &#125;
+    v6 = &quot;wrong!&quot;;
+</code></pre>
+<p>有一个地方需要注意一下就是IDA给的伪代码不完全准确，导致v8显示的数据不全，</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241111220925083.png" alt="image-20241111220925083"></p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241111220952998.png" alt="image-20241111220952998"></p>
+<p>可以看到F9这个数据没有被IDA伪代码状态下显示出来。</p>
+<h2 id="NSSRound-3-Team-jump-by-jump"><a href="#NSSRound-3-Team-jump-by-jump" class="headerlink" title="[NSSRound#3 Team]jump_by_jump"></a>[NSSRound#3 Team]jump_by_jump</h2><p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241113201117900.png" alt="image-20241113201117900"></p>
+<p>shift+f12居然直接看到了flag。不过假装自己没看见，分析一下。</p>
+<h2 id="CISCN-2022-东北-easycpp"><a href="#CISCN-2022-东北-easycpp" class="headerlink" title="[CISCN 2022 东北]easycpp"></a>[CISCN 2022 东北]easycpp</h2><p>main函数里写了加密逻辑，enc[0]^enc[1]，1异或2，2异或3，然后下一轮1异或2。只需要反向异或就行。附上解密代码。</p>
+<pre><code class="c">#include &lt;stdio.h&gt;
+int main()&#123;
+    unsigned char enc[] =
+    &#123;
+        0x0A, 0x0B, 0x7D, 0x2F, 0x7F, 0x67, 0x65, 0x30, 0x63, 0x60, 
+        0x37, 0x3F, 0x3C, 0x3F, 0x33, 0x3A, 0x3C, 0x3B, 0x35, 0x3C, 
+        0x3E, 0x6C, 0x64, 0x31, 0x64, 0x6C, 0x3B, 0x68, 0x61, 0x62, 
+        0x65, 0x36, 0x33, 0x60, 0x62, 0x36, 0x1C, 0x7D
+    &#125;;
+    for(int i=34;i&gt;=0;i--)&#123;
+        enc[i+2]^=enc[i+3];
+        enc[i+1]^=enc[i+2];
+        enc[i]^=enc[i+1];
+    &#125;
+    printf(&quot;%s&quot;,enc);
+&#125;
+</code></pre>
+<h2 id="CISCN-2023-初赛-babyRE"><a href="#CISCN-2023-初赛-babyRE" class="headerlink" title="[CISCN 2023 初赛]babyRE"></a>[CISCN 2023 初赛]babyRE</h2><p>xml给了一个网站，访问网站导入xml。我写了一个py脚本导出加密数据。</p>
+<pre><code class="python">import xml.dom.minidom as minidom
+dom=minidom.parse(&#39;[CISCN 2023 初赛]babyRE.xml&#39;)
+root=dom.documentElement
+block = root.getElementsByTagName(&#39;l&#39;)
+last = block[3].firstChild.data
+enc = []
+print(len(block))
+for i in range(0, len(block),2):
+    print(block[i+1].firstChild.data)
+    if block[i+1].firstChild.data!=last:
+        enc.insert(int(block[i+1].firstChild.data)-1, block[i].firstChild.data)
+    else:
+        enc.append(block[i].firstChild.data)
+print(enc)
+</code></pre>
+<p>随后分析一下加密过程。</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241119121800750.png" alt="image-20241119121800750"></p>
+<p>这里注意一下当i&#x3D;1的时候第0个字符似乎会默认为0处理，也就是test第一个元素没有做处理。</p>
+<p>解密脚本：</p>
+<pre><code class="python">enc=[&#39;102&#39;, &#39;10&#39;, &#39;13&#39;, &#39;6&#39;, &#39;28&#39;, &#39;74&#39;, &#39;3&#39;, &#39;1&#39;, &#39;3&#39;, &#39;7&#39;, &#39;85&#39;, &#39;0&#39;, &#39;4&#39;, &#39;75&#39;, &#39;20&#39;, &#39;92&#39;, &#39;92&#39;, &#39;8&#39;, &#39;28&#39;, &#39;25&#39;, &#39;81&#39;, &#39;83&#39;, &#39;7&#39;, &#39;28&#39;, &#39;76&#39;, &#39;88&#39;, &#39;9&#39;, &#39;0&#39;, &#39;29&#39;, &#39;73&#39;, &#39;0&#39;, &#39;86&#39;, &#39;4&#39;, &#39;87&#39;, &#39;87&#39;, &#39;82&#39;, &#39;84&#39;, &#39;85&#39;, &#39;4&#39;, &#39;85&#39;, &#39;87&#39;, &#39;30&#39;]
+for i in range(0,len(enc)):
+    enc[i] = int(enc[i])
+for i in range(0,len(enc)-1):
+    enc[i+1]^=enc[i]
+for i in range(0,len(enc)):
+    print(chr(enc[i]),end=&#39;&#39;)
+</code></pre>
+<h2 id="LitCTF-2023-程序和人有一个能跑就行了"><a href="#LitCTF-2023-程序和人有一个能跑就行了" class="headerlink" title="[LitCTF 2023]程序和人有一个能跑就行了"></a>[LitCTF 2023]程序和人有一个能跑就行了</h2><h2 id="HGAME-2023-week2-math"><a href="#HGAME-2023-week2-math" class="headerlink" title="[HGAME 2023 week2]math"></a>[HGAME 2023 week2]math</h2><pre><code class="c">v11[5 * i + j] += *((char *)&amp;savedregs + 5 * i + k - 368) * v10[5 * k + j];
+</code></pre>
+<p>关键代码，可以理解成</p>
+<pre><code class="c">v11[5 * i + j] += input1[5 * i + k] * v10[5 * k + j];
+</code></pre>
+<p>其中i,j,k均属于0到4，且原始v11为0</p>
+<p>得出结果后跟v12比较，即v12为最终结果</p>
+<p>可知v12[0]的值是当i和j都为0时的解，k&#x3D;1,2,3,4以此类推</p>
+<p>随后用z3解方程。</p>
+<h2 id="LitCTF-2023-snake"><a href="#LitCTF-2023-snake" class="headerlink" title="[LitCTF 2023]snake"></a>[LitCTF 2023]snake</h2><p>pyc文件，与以往不同的是需要改头文件的Magic Number。</p>
+<pre><code class="python">enum PycMagic &#123;
+    MAGIC_1_0 = 0x00999902,
+    MAGIC_1_1 = 0x00999903, /* Also covers 1.2 */
+    MAGIC_1_3 = 0x0A0D2E89,
+    MAGIC_1_4 = 0x0A0D1704,
+    MAGIC_1_5 = 0x0A0D4E99,
+    MAGIC_1_6 = 0x0A0DC4FC,
+
+    MAGIC_2_0 = 0x0A0DC687,
+    MAGIC_2_1 = 0x0A0DEB2A,
+    MAGIC_2_2 = 0x0A0DED2D,
+    MAGIC_2_3 = 0x0A0DF23B,
+    MAGIC_2_4 = 0x0A0DF26D,
+    MAGIC_2_5 = 0x0A0DF2B3,
+    MAGIC_2_6 = 0x0A0DF2D1,
+    MAGIC_2_7 = 0x0A0DF303,
+
+    MAGIC_3_0 = 0x0A0D0C3A,
+    MAGIC_3_1 = 0x0A0D0C4E,
+    MAGIC_3_2 = 0x0A0D0C6C,
+    MAGIC_3_3 = 0x0A0D0C9E,
+    MAGIC_3_4 = 0x0A0D0CEE,
+    MAGIC_3_5 = 0x0A0D0D16,
+    MAGIC_3_5_3 = 0x0A0D0D17,
+    MAGIC_3_6 = 0x0A0D0D33,
+    MAGIC_3_7 = 0x0A0D0D42,
+    MAGIC_3_8 = 0x0A0D0D55,
+    MAGIC_3_9 = 0x0A0D0D61,
+&#125;;
+</code></pre>
+<p>注意一下用010改的时候要反着写，例如0x0A0D0D42改成<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241125181911770.png" alt="image-20241125181911770"></p>
+<h2 id="WUSTCTF-2020-Cr0ssfun"><a href="#WUSTCTF-2020-Cr0ssfun" class="headerlink" title="[WUSTCTF 2020]Cr0ssfun"></a>[WUSTCTF 2020]Cr0ssfun</h2><p>直接明文给了flag，<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241125182448740.png" alt="image-20241125182448740"></p>
+<h2 id="CISCN-2021初赛-babybc"><a href="#CISCN-2021初赛-babybc" class="headerlink" title="[CISCN 2021初赛]babybc"></a>[CISCN 2021初赛]babybc</h2><p>查了一下bc文件，应该先用</p>
+<pre><code class="bash">clang output.bc -o program
+</code></pre>
+<p>生成可执行文件</p>
+<pre><code class="c">v27 = 0LL;
+  do
+  &#123;
+    v24 = v27;
+    memset(v29, 0, sizeof(v29));
+    v25 = &amp;v29[(unsigned __int8)map[5 * v27]];
+    if ( *v25
+      || (*v25 = 1, v23 = &amp;v29[(unsigned __int8)map[5 * v27 + 1]], *v23)
+      || (*v23 = 1, v2 = &amp;v29[(unsigned __int8)map[5 * v27 + 2]], *v2)
+      || (*v2 = 1, v1 = &amp;v29[(unsigned __int8)map[5 * v27 + 3]], *v1)
+      || (*v1 = 1, v29[(unsigned __int8)map[5 * v27 + 4]]) )
+    &#123;
+      v22 = 0;
+      return v22 &amp; 1;
+    &#125;
+    ++v27;
+  &#125;
+</code></pre>
+<p>这是在检查同一行元素是否相同</p>
+<p>总体规则是：输入25个数字（1-5），填充到5*5map中。每行每列元素不同。</p>
+<ul>
+<li><p><code>row[4 * v16]</code> 对应于 <code>map[5 * v16]</code> 和 <code>map[5 * v16 + 1]</code> 的比较。</p>
+</li>
+<li><p><code>row[4 * v16 + 1]</code> 对应于 <code>map[5 * v16 + 1]</code> 和 <code>map[5 * v16 + 2]</code> 的比较，以此类推。</p>
+</li>
+<li><p>如果 </p>
+<pre><code>row[x] == 1
+</code></pre>
+<ul>
+<li>当前元素必须小于下一个元素（递增）。</li>
+</ul>
+</li>
+<li><p>如果 </p>
+<pre><code>row[x] == 2
+</code></pre>
+<ul>
+<li>当前元素必须大于下一个元素（递减）。</li>
+</ul>
+</li>
+</ul>
+<p>col是相反的。</p>
+<pre><code class="python">import z3
+row = [0, 0, 0, 1, 1, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0]
+col = [0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1]
+r=5
+c=5
+s = z3.Solver()
+m = [[z3.Int(f&quot;m_&#123;i&#125;_&#123;j&#125;&quot;) for j in range(c)] for i in range(r)]
+print(m)
+s.add(m[2][2]==4,m[3][3]==3)
+for i in range(r):
+    for j in range(c):
+        s.add(1 &lt;= m[i][j], m[i][j] &lt;= 5)
+for i in range(r):
+    for j in range(c):
+        for k in range(j+1, c):
+            s.add(m[i][j] != m[i][k])
+for i in range(c):
+    for j in range(r):
+        for k in range(j+1, r):
+            s.add(m[j][i] != m[k][i])
+for i in range(20):
+    if row[i] == 1:
+        s.add(m[i//4][i%4] &gt; m[i//4][i%4+1])
+    if row[i] == 2:
+        s.add(m[i//4][i%4] &lt; m[i//4][i%4+1])
+for i in range(20):
+    if col[i] == 1:
+        s.add(m[i//5][i%5] &lt; m[i//5+1][i%5])
+    if col[i] == 2:
+        s.add(m[i//5][i%5] &gt; m[i//5+1][i%5])
+if s.check() == z3.sat:
+    model = s.model()
+    for i in range(r):
+        for j in range(c):
+            print(model[m[i][j]], end=&#39;&#39;)
+else:
+    print(&quot;No solution found.&quot;)
+&#39;&#39;&#39;
+把给的数字换成0
+14253
+53142
+35021
+21504
+42315
+&#39;&#39;&#39;
+</code></pre>
+<p>map给了两个数字要换成0因为fill_number里</p>
+<pre><code class="python">v11 = v14;
+    v12 = 5 * v14;
+    v13 = *(_BYTE *)(a1 + 5 * v14);
+    if ( map[5 * v14] )
+    &#123;
+      v10 = 0;
+      if ( v13 != 48 )
+        return v10 &amp; 1;
+    &#125;
+    else
+    &#123;
+      map[5 * v14] = v13 - 48;
+    &#125;
+</code></pre>
+<p>若map数据非0，则必须输入为0，否则程序退出。</p>
+<h2 id="MoeCTF-2021-baby-bc"><a href="#MoeCTF-2021-baby-bc" class="headerlink" title="[MoeCTF 2021]baby_bc"></a>[MoeCTF 2021]baby_bc</h2><p>先生成可执行文件。</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241126094420931.png" alt="image-20241126094420931"></p>
+<p>分析加密逻辑。本题采用RC4加密。先输入长度40的v9。在进行RC4加密。然后进入HSencode。解密则需要先逆向HSencode的过程，再想办法得到密钥流然后直接异或就得到原文了。</p>
+<h2 id="HNCTF-2022-WEEK2-来解个方程"><a href="#HNCTF-2022-WEEK2-来解个方程" class="headerlink" title="[HNCTF 2022 WEEK2]来解个方程?"></a>[HNCTF 2022 WEEK2]来解个方程?</h2><p>考察z3使用。</p>
+<pre><code class="python">from z3 import *
+s = z3.Solver()
+v=[Int(&#39;v%d&#39; % i) for i in range(0,50)] #批量添加变量
+s.add() #添加约束条件
+s.check() #判断是否添加的约束条件是否有解，有解返回sat，无解返回unsat
+a = s.model() #求解
+for i in v:
+    if a[i] is not None:
+        print(chr(a[i].as_long()), end=&#39;&#39;) #打印字符
+</code></pre>
+<h2 id="CISCN-2022-东北-happymath"><a href="#CISCN-2022-东北-happymath" class="headerlink" title="[CISCN 2022 东北]happymath"></a>[CISCN 2022 东北]happymath</h2><p>输入长度为32的字符串写入byte_7FF73623AC30中，</p>
+<h1 id="ISCTF2024新生赛题目"><a href="#ISCTF2024新生赛题目" class="headerlink" title="ISCTF2024新生赛题目"></a>ISCTF2024新生赛题目</h1><h2 id="MIPS"><a href="#MIPS" class="headerlink" title="MIPS"></a>MIPS</h2><p>需要先把文件编译一下。</p>
+<p>Linux安装一下</p>
+<pre><code class="bash">sudo apt install gcc-mips-linux-gnu
+</code></pre>
+<p>然后</p>
+<pre><code class="bash"> mips-linux-gnu-gcc -o MIPS MIPS.s
+</code></pre>
+<p>就可以使用ida进行分析了（ida9才可以反编译）</p>
+<pre><code class="python">v3 = [104,74,120]
+arr = [214,  50,  39,  78, 119, 202, 213, 118, 163,  33,
+    2,   9, 104,   9,  69, 137,  54, 154, 186, 144,
+  236,  71, 152, 248,  254, 240,0x4b]
+v5 = [17,43,26, 1,32,  17,  7, 36,  18,   1, 37,  22]
+print(len(v5))
+for i in range(len(v5)):
+    v5[i] = chr(v5[i] ^ v3[i%3])
+print(v5)
+key = v5
+def gen(key):
+    s = list(range(256))
+    j = 0
+    for i in range(256):
+        j = (j + s[i] + ord(key[i % len(key)])) % 256
+        tmp = s[i]
+        s[i] = s[j]
+        s[j] = tmp
+    i = j = 0
+    data = []
+    for _ in range(50):
+        i = (i + 1) % 256
+        j = (j + s[i]) % 256
+        tmp = s[i]
+        s[i] = s[j]
+        s[j] = tmp
+        data.append(s[(s[i] + s[j]) % 256])
+    return data
+key = gen(key)
+enc = arr
+c=0
+for i in range(len(enc)):
+    enc[i]^=key[c]^82
+    c+=1
+print(bytes(enc))
+</code></pre>
+<p>魔改RC4，多异或了一个82，然后key被异或修改了。</p>
+<h2 id="《回忆安魂曲》–第二章：当记忆被割裂"><a href="#《回忆安魂曲》–第二章：当记忆被割裂" class="headerlink" title="《回忆安魂曲》–第二章：当记忆被割裂"></a>《回忆安魂曲》–第二章：当记忆被割裂</h2><p>这是一个ELF文件，我采用IDA远程wsl进行动态调试</p>
+<h3 id="IDA配置远程调试"><a href="#IDA配置远程调试" class="headerlink" title="IDA配置远程调试"></a>IDA配置远程调试</h3><p>在wsl下使用</p>
+<pre><code class="bash">./linux_server64
+</code></pre>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46296905/article/details/115794076">IDA远程动态调试(linux &amp; Windows)_ida远程调试-CSDN博客</a></p>
+<p>配置好动调之后，在String找到了加密的key：</p>
+<blockquote>
+<p>i_can_reverse_but_i_can_not_have_you</p>
+</blockquote>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241111222544679.png" alt="image-20241111222544679"></p>
+<p>找到函数但是发现IDA无法生成伪代码</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241111222638795.png" alt="image-20241111222638795"></p>
+<p>需要把这个改成jmp rax之后可以看到伪代码</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241111222712637.png" alt="image-20241111222712637"></p>
+<p>总共好几个加密函数，通过动态调试可以知道执行顺序，随后写出解密脚本如下：</p>
+<pre><code class="python"># 解密函数
+def decrypt_data(encrypted_data, key):
+    decrypted_data = []
+
+    for i, enc_byte in enumerate(encrypted_data):
+        key_byte = key[i]
+        enc_byte ^= key_byte+i
+        enc_byte -= 6
+        enc_byte ^= (i + 102) ^ 0x52
+        decrypted_data.append(enc_byte)
+
+    return decrypted_data
+
+
+# 示例加密后的数据
+encrypted_data = [
+    0xEA, 0x0C, 0x1A, 0x11, 0xF6, 0x2C, 0x1D, 0x3E, 0x17, 0x35,
+    0x31, 0x29, 0xF4, 0x39, 0x39, 0xD3, 0xC3, 0x2D, 0x00, 0x10,
+    0x30, 0x3D, 0xCC, 0x00, 0xD3, 0xC0, 0x4B, 0xC6, 0x11, 0xC7,
+    0x29, 0x3E, 0xBA, 0x60, 0x90, 0x34
+]  # 假设这是加密后的字节
+
+# 密钥
+key = [0x69, 0x5F, 0x63, 0x61, 0x6E, 0x5F, 0x72, 0x65, 0x76, 0x65,
+       0x72, 0x73, 0x65, 0x5F, 0x62, 0x75, 0x74, 0x5F, 0x69, 0x5F,
+       0x63, 0x61, 0x6E, 0x5F, 0x6E, 0x6F, 0x74, 0x5F, 0x68, 0x61,
+       0x76, 0x65, 0x5F, 0x79, 0x6F, 0x75]
+
+# 恢复加密前的数据
+decrypted_data = decrypt_data(encrypted_data, key)
+
+# 打印恢复后的数据（以十六进制表示）
+print([hex(byte) for byte in decrypted_data])
+for i in decrypted_data:
+    print(chr(i), end=&#39;&#39;)
+</code></pre>
+<h2 id="《回忆安魂曲》–第三章：逃不出的黑墙"><a href="#《回忆安魂曲》–第三章：逃不出的黑墙" class="headerlink" title="《回忆安魂曲》–第三章：逃不出的黑墙"></a>《回忆安魂曲》–第三章：逃不出的黑墙</h2><p>很经典，就是上面的走迷宫问题</p>
+<h2 id="找啊找"><a href="#找啊找" class="headerlink" title="找啊找"></a>找啊找</h2><p>问了大佬才知道这个是有壳的。用DIE查壳发现有壳<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241114232843873.png" alt="image-20241114232843873"></p>
+<p>但是直接用upx -d解不出来。网上搜了一下，这个文件好像区段名被修改。（贴一个参考网页<a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-326995-1-1.html">UPX防脱壳机脱壳、去除特征码、添加花指令小探 - 吾爱破解 - 52pojie.cn</a>）</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241114233409112.png" alt="image-20241114233409112"></p>
+<p>这里把APK改成UPX，随后就可以upx -d解出来了。</p>
+<p>随后有一个小坑就是main里边的unk_40040在程序执行时被悄悄更改了值，动调可以看出来。拿到最后flag</p>
+<pre><code class="python">def reverse(s):
+    res = &quot;&quot;
+    for i in s:
+        if i.islower():
+            res += i.upper()
+        elif i.isupper():
+            res += i.lower()
+        else:
+            res += i
+    return res
+s = [0x50, 0x4A, 0x5A, 0x4D, 0x5F, 0x42, 0x7E, 0x76, 0x76, 0x5D,
+        0x18, 0x18, 0x08, 0x4A, 0x56, 0x66, 0x60, 0x56, 0x4C, 0x66,
+        0x5F, 0x08, 0x57, 0x5D, 0x66, 0x08, 0x6D, 0x66, 0x54, 0x79,
+        0x50, 0x57, 0x18, 0x18, 0x79, 0x44]
+for i in s:
+    i^=0x39
+    print(reverse(chr(i)),end=&quot;&quot;)
+</code></pre>
+<h2 id="桀桀桀"><a href="#桀桀桀" class="headerlink" title="桀桀桀"></a>桀桀桀</h2><p>比赛时没有做出来，赛后看看网上的wp复现一遍。</p>
+<p>先使用z3解方程，答案是ISCTF。</p>
+<p>第二步魔改Tea（注意key被TLS改了）。</p>
+<p>存在jz&#x2F;jnz花指令，nop掉</p>
+<pre><code class="c">int __cdecl tea_0(unsigned int *a1, int *a2)
+&#123;
+  int result; // eax
+  int v3; // [esp+D0h] [ebp-68h]
+  int v4; // [esp+DCh] [ebp-5Ch]
+  int v5; // [esp+E8h] [ebp-50h]
+  int v6; // [esp+F4h] [ebp-44h]
+  int i; // [esp+100h] [ebp-38h]
+  int v8; // [esp+10Ch] [ebp-2Ch]
+  int v9; // [esp+118h] [ebp-20h]
+  unsigned int v10; // [esp+124h] [ebp-14h]
+  unsigned int v11; // [esp+130h] [ebp-8h]
+
+  v11 = *a1;
+  v10 = a1[1];
+  v9 = 0;
+  v8 = -1640531527;
+  v6 = *a2;
+  v5 = a2[1];
+  v4 = a2[2];
+  v3 = a2[3];
+  for ( i = 0; i &lt; 32; ++i )
+  &#123;
+    v9 += v8;
+    v11 += (v5 + (v10 &gt;&gt; 5)) ^ (v9 + v10) ^ (v6 + 16 * v10);
+    v10 += (v3 + (v11 &gt;&gt; 5)) ^ (v9 + v11) ^ (v4 + 16 * v11);
+    if ( i == 15 )
+    &#123;
+      v6 = a2[2];
+      v5 = a2[3];
+      v4 = *a2;
+      v3 = a2[1];
+    &#125;
+    else if ( i == 23 )
+    &#123;
+      v8 = 1131796;
+    &#125;
+  &#125;
+  *a1 = v11;
+  result = 4;
+  a1[1] = v10;
+  return result;
+&#125;
+</code></pre>
+<p>然后第三步：</p>
+<pre><code>rand();
+v9 = sub_41126C();
+enc2(Str, v9);
+</code></pre>
+<p>注意这个代码，对应汇编如下。</p>
+<pre><code class="asm">.text:004121D6                 call    ds:rand
+.text:004121DC                 cmp     esi, esp
+.text:004121DE                 call    sub_41126C
+.text:004121E3                 mov     [ebp+var_74], eax
+.text:004121E6                 mov     eax, [ebp+var_74]
+.text:004121E9                 push    eax             ; int
+.text:004121EA                 lea     ecx, [ebp+Str]
+.text:004121ED                 push    ecx             ; Str
+.text:004121EE                 call    enc2
+</code></pre>
+<p>如果sub_41126C未返回值的话那么v9就应该是rand的返回值，ida分析有误。</p>
+<p>再来看enc2的内容</p>
+<pre><code class="c">void __cdecl sub_411B90(char *Str, int a2)
+&#123;
+  char v2; // cl
+  signed int v3; // [esp+D0h] [ebp-2Ch]
+  signed int v4; // [esp+DCh] [ebp-20h]
+
+  v3 = 0;
+  v4 = j_strlen(Str);
+  while ( v3 &lt; v4 )
+  &#123;
+    if ( v3 % 2 )
+      v2 = (a2 &gt;&gt; 6) ^ Str[v3];
+    else
+      v2 = (a2 - ((unsigned __int8)(a2 &gt;&gt; 6) &lt;&lt; 6)) ^ Str[v3];
+    Str[v3++] = v2;
+  &#125;
+&#125;
+</code></pre>
+<p>对str进行了奇偶分组异或操作。</p>
+<p>解密操作：先奇偶分组异或，然后Tea解密。</p>
+<p>解密脚本</p>
+<pre><code class="c">#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+void DeTea(unsigned char* enc, uint32_t* key, uint32_t XorNum) &#123;
+    uint32_t k1, k2, k3, k4;
+    uint32_t sum, delta;
+    uint32_t v1, v2;
+    uint32_t* flag = NULL;
+    int index = 0;
+    int c = 0;
+    flag = (uint32_t*)enc;
+    int key1, key2, len;
+    int i = 0;
+    key1 = XorNum &gt;&gt; 6;
+    key2 = XorNum - (key1 &lt;&lt; 6);
+    len = 32;
+    for (i=0; i &lt; len; i++) &#123;
+        if (i % 2) &#123;
+            enc[i] ^= key1;
+        &#125;
+        else &#123;
+            enc[i] ^= key2;
+        &#125;
+    &#125;
+    k1 = key[2], k2 = key[3], k3 = key[0], k4 = key[1];
+    for (c = 0; c &lt; 4; c++) &#123;
+        delta = 0x114514;
+        k1 = key[2], k2 = key[3], k3 = key[0], k4 = key[1];
+        sum = delta * 8 + 24 * 0x9e3779b9;
+        v1 = flag[c * 2];
+        v2 = flag[c * 2 + 1];
+        for (index=0; index &lt; 32; index++) &#123;
+            v2 -= ((v1 &lt;&lt; 4) + k3) ^ (v1 + sum) ^ ((v1 &gt;&gt; 5) + k4);
+            v1 -= ((v2 &lt;&lt; 4) + k1) ^ (v2 + sum) ^ ((v2 &gt;&gt; 5) + k2);
+            sum -= delta;
+            if (index == 7) &#123;
+                delta = 0x9e3779b9;
+            &#125;
+            else if (index == 15) &#123;
+                k1 = key[0];
+                k2 = key[1];
+                k3 = key[2];
+                k4 = key[3];
+            &#125;
+        &#125;
+        flag[c * 2] = v1;
+        flag[c * 2 + 1] = v2;
+    &#125;
+    printf(&quot;%s\n&quot;,flag);
+&#125;
+
+int main()&#123;
+    unsigned char enc[60]=&#123;
+        177, 210, 249, 122, 131,  76,  81,  35, 183, 173, 
+        169, 190, 232, 250,  36,  22, 147, 254,  66, 215, 
+        176,  31,  82, 247,  90, 125, 128, 232,  40, 252, 
+        65, 111
+    &#125;; 
+    int Seed=0;
+    char v10[6] = &quot;ISCTF&quot;;
+
+    for (int i = 0; i &lt; 5; ++i )
+        Seed += v10[i] ^ 0xA1;
+    uint32_t key[4] = &#123;28519, 26994, 26740, 29549&#125;;
+    for(int i=0;i&lt;4;i++)&#123;
+        key[i]^=0xA1u;
+    &#125;
+    srand(Seed);
+    int xornum = rand();
+    DeTea(enc,key,xornum);
+    printf(&quot;%s&quot;,enc);
+&#125;
+</code></pre>
+<p>注意一下int Seed&#x3D;0。一开始没让它&#x3D;0，导致一直不行。</p>
+<h1 id="ISCTF2023新生赛题目"><a href="#ISCTF2023新生赛题目" class="headerlink" title="ISCTF2023新生赛题目"></a>ISCTF2023新生赛题目</h1><h2 id="FlowerRSA"><a href="#FlowerRSA" class="headerlink" title="FlowerRSA"></a>FlowerRSA</h2><p>首先有一个花指令</p>
+<pre><code class="assembly">  xor     rbx, rbx
+.text:0000000000001268                 test    rbx, rbx
+.text:000000000000126B                 jnz     short labela
+.text:000000000000126D                 jz      short labelb
+</code></pre>
+<p>rbx值肯定为0，所以肯定会跳转到lableb。把无效部分nop掉。</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241127161133968.png" alt="image-20241127161133968"></p>
+<p>输入52位的v7，然后分成13组传给s2n函数。比较每一组的465次方mod3162244531与c是否相等。</p>
+<p>进行了RSA加密运算。使用yafu进行分解质因数。</p>
+<pre><code>factor(3162244531)
+</code></pre>
+<p>代码如下</p>
+<pre><code class="python">c =[1966878405,2375075638,  2166893744,  2129446000,  2488145363,  746243878,  1904115824,  818668601,  2983811740,  1840670651,  306202172,  2009857636,  299417177]
+e = 465
+q = 56369
+p = 56099
+n = p*q
+phi = (p-1)*(q-1)
+d = pow(e,-1,phi)
+flag = &#39;&#39;
+for i in c:
+    flag+=(pow(i,d,n).to_bytes(4,&#39;big&#39;).decode(&#39;utf-8&#39;))
+print(flag)
+</code></pre>
+<p>注意to_bytes可以把数字转成字符，然后decode把bytes转成str格式。方便拼接flag。</p>
+<h2 id="ezrust"><a href="#ezrust" class="headerlink" title="ezrust"></a>ezrust</h2><p>拖入IDA分析，一开始有很多变量无法识别，需要F5多刷新几下。</p>
+<h1 id="HBCTF-部分题目"><a href="#HBCTF-部分题目" class="headerlink" title="HBCTF 部分题目"></a>HBCTF 部分题目</h1><h2 id="ezre"><a href="#ezre" class="headerlink" title="ezre"></a>ezre</h2><p>sm4加密算法。找一个解密脚本</p>
+<h1 id="Newstar-2024"><a href="#Newstar-2024" class="headerlink" title="Newstar 2024"></a>Newstar 2024</h1><h2 id="PangBai-泰拉记（1）"><a href="#PangBai-泰拉记（1）" class="headerlink" title="PangBai 泰拉记（1）"></a>PangBai 泰拉记（1）</h2><p>反调试，关键在于result</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241117160022419.png" alt="image-20241117160022419"></p>
+<p>当检测到调试时，result的值变成1，执行if语句中的内容。把key的值改变。从而下一步产生错误flag</p>
+<p>应该手动让它执行else语句，从而获得正确key值。拿到正确flag。</p>
+<h2 id="011vm"><a href="#011vm" class="headerlink" title="011vm"></a>011vm</h2><p>反编译之后很复杂，直接看题解了。</p>
+<h2 id="取啥名好呢？"><a href="#取啥名好呢？" class="headerlink" title="取啥名好呢？"></a>取啥名好呢？</h2><p>根据题目提示，推测应该是程序转移到异常处理程序<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241119212147860.png" alt="image-20241119212147860"></p>
+<p>发现疑似数据的东西</p>
+<h2 id="SMc-math"><a href="#SMc-math" class="headerlink" title="SMc_math"></a>SMc_math</h2><p>关键在于encrypt函数被加密了，运行时才会被解密。</p>
+<p>可以打一个断点<img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241120111900633.png" alt="image-20241120111900633"></p>
+<p>在解密完成时打断点然后恢复函数内容。</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241120112014955.png" alt="image-20241120112014955"></p>
+<p>重新分析代码</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241120112133121.png" alt="image-20241120112133121"></p>
+<pre><code class="c">_BOOL8 __fastcall encrypt(unsigned int *a1)
+&#123;
+  __int64 v2; // [rsp+10h] [rbp-38h]
+  __int64 v3; // [rsp+18h] [rbp-30h]
+  __int64 v4; // [rsp+20h] [rbp-28h]
+  __int64 v5; // [rsp+28h] [rbp-20h]
+  __int64 v6; // [rsp+30h] [rbp-18h]
+  __int64 v7; // [rsp+38h] [rbp-10h]
+  __int64 v8; // [rsp+40h] [rbp-8h]
+
+  v2 = *a1;
+  v3 = a1[1];
+  v4 = a1[2];
+  v5 = a1[3];
+  v6 = a1[4];
+  v7 = a1[5];
+  v8 = a1[6];
+  return 5 * (v3 + v2) + 4 * v4 + 6 * v5 + v6 + 9 * v8 + 2 * v7 == 0xD5CC7D4FFLL
+      &amp;&amp; 4 * v8 + 3 * v5 + 6 * v4 + 10 * v3 + 9 * v2 + 9 * v7 + 3 * v6 == 0x102335844BLL
+      &amp;&amp; 9 * v6 + 4 * (v5 + v4) + 5 * v3 + 4 * v2 + 3 * v8 + 10 * v7 == 0xD55AEABB9LL
+      &amp;&amp; 9 * v3 + 5 * v2 + 9 * v8 + 2 * (v4 + 2 * v5 + 5 * v6 + v7) == 0xF89F6B7FALL
+      &amp;&amp; 5 * v6 + 9 * v5 + 7 * v2 + 2 * v3 + v4 + 3 * v8 + 9 * v7 == 0xD5230B80BLL
+      &amp;&amp; 8 * v8 + 6 * v5 + 10 * v4 + 5 * v3 + 6 * v2 + 3 * v7 + 9 * v6 == 0x11E28ED873LL
+      &amp;&amp; v2 + 4 * (v4 + v3 + 2 * v5) + 9 * v6 + v7 + 3 * v8 == 0xB353C03E1LL;
+&#125;
+</code></pre>
+<p>得到这个，需要解方程。用</p>
+<h2 id="ezre1-1"><a href="#ezre1-1" class="headerlink" title="ezre1"></a>ezre1</h2>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2024 songhahaha的个人博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;songhahaha
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
