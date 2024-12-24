@@ -1,408 +1,326 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8" />
+    <title>一些Reverse新生赛题目 | songhahaha的个人博客</title>
+    <meta name="author" content="songhahaha" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="0xgame题目">
-<meta property="og:type" content="article">
-<meta property="og:title" content="一些Reverse新生赛题目">
-<meta property="og:url" content="http://example.com/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/index.html">
-<meta property="og:site_name" content="songhahaha的个人博客">
-<meta property="og:description" content="0xgame题目">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/41d1a87242b8463d441bcc83e01987d39f7c837f.png">
-<meta property="article:published_time" content="2024-10-22T14:55:26.796Z">
-<meta property="article:modified_time" content="2024-10-25T11:41:32.849Z">
-<meta property="article:author" content="songhahaha">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/41d1a87242b8463d441bcc83e01987d39f7c837f.png">
-
-<link rel="canonical" href="http://example.com/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
-  <title>一些Reverse新生赛题目 | songhahaha的个人博客</title>
-  
+
+
+<script src="/js/lib/preview.js"></script>
 
 
 
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">songhahaha的个人博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">songhahaha</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
 
 
 
+<link rel="stylesheet" href="/css/main.css" />
 
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          一些Reverse新生赛题目
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-10-22 22:55:26" itemprop="dateCreated datePublished" datetime="2024-10-22T22:55:26+08:00">2024-10-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-25 19:41:32" itemprop="dateModified" datetime="2024-10-25T19:41:32+08:00">2024-10-25</time>
-              </span>
-
-          
-
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>SONGHAHAHA的个人博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SONGHAHAHA的个人博客</span>
         </div>
-      </header>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
 
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>一些Reverse新生赛题目</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/22
+        </span>
+        
+        
+    </div>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
+    <div class="content" v-pre>
         <h2 id="0xgame题目"><a href="#0xgame题目" class="headerlink" title="0xgame题目"></a>0xgame题目</h2><span id="more"></span>
 
 <h4 id="Week-3-BabyASM"><a href="#Week-3-BabyASM" class="headerlink" title="[Week 3] BabyASM"></a>[Week 3] BabyASM</h4><p>汇编语言，上网参考了好多资料。</p>
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html">汇编语言入门教程 - 阮一峰的网络日志</a></p>
 <p>先声明了一个data数组。然后L3这里有一个循环，当计数器小于等于21时，就跳转L4</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L3:</span><br><span class="line">    cmp    DWORD PTR [esp+28], 21</span><br><span class="line">    jle    L4</span><br></pre></td></tr></table></figure>
-
+<pre><code>L3:
+    cmp    DWORD PTR [esp+28], 21
+    jle    L4
+</code></pre>
 <p>L4执行操作的大意是把data中对应位置元素加上28</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add    eax, 28</span><br></pre></td></tr></table></figure>
-
+<pre><code>add    eax, 28
+</code></pre>
 <p>之后进入L5，将22-42的元素进行异或（22对应0，类推）</p>
 <p>最后附上解密脚本：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义初始数据</span></span><br><span class="line">data = [</span><br><span class="line">    <span class="number">20</span>, <span class="number">92</span>, <span class="number">43</span>, <span class="number">69</span>, <span class="number">81</span>, <span class="number">73</span>, <span class="number">95</span>, <span class="number">23</span>, <span class="number">72</span>, <span class="number">22</span>, <span class="number">24</span>, <span class="number">69</span>,</span><br><span class="line">    <span class="number">25</span>, <span class="number">27</span>, <span class="number">22</span>, <span class="number">17</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">24</span>, <span class="number">73</span>, <span class="number">17</span>, <span class="number">24</span>, <span class="number">85</span>, <span class="number">27</span>,</span><br><span class="line">    <span class="number">112</span>, <span class="number">76</span>, <span class="number">15</span>, <span class="number">92</span>, <span class="number">24</span>, <span class="number">1</span>, <span class="number">73</span>, <span class="number">84</span>, <span class="number">13</span>, <span class="number">81</span>, <span class="number">12</span>, <span class="number">0</span>,</span><br><span class="line">    <span class="number">84</span>, <span class="number">73</span>, <span class="number">82</span>, <span class="number">8</span>, <span class="number">82</span>, <span class="number">81</span>, <span class="number">76</span>, <span class="number">125</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一个循环：将前22个字节加28</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">22</span>):</span><br><span class="line">    data[i] += <span class="number">28</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第二个循环：对接下来的22个字节进行异或操作</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">22</span>, <span class="number">43</span>):  <span class="comment"># 从22到42</span></span><br><span class="line">    data[i] ^= data[i - <span class="number">22</span>]  <span class="comment"># 异或当前字节与22个前的字节</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字节转换为字符并打印</span></span><br><span class="line">output = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">chr</span>(byte) <span class="keyword">for</span> byte <span class="keyword">in</span> data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最终结果:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(output)</span><br></pre></td></tr></table></figure>
+<pre><code class="python"># 定义初始数据
+data = [
+    20, 92, 43, 69, 81, 73, 95, 23, 72, 22, 24, 69,
+    25, 27, 22, 17, 23, 29, 24, 73, 17, 24, 85, 27,
+    112, 76, 15, 92, 24, 1, 73, 84, 13, 81, 12, 0,
+    84, 73, 82, 8, 82, 81, 76, 125]
 
+# 第一个循环：将前22个字节加28
+for i in range(0,22):
+    data[i] += 28
+
+# 第二个循环：对接下来的22个字节进行异或操作
+for i in range(22, 43):  # 从22到42
+    data[i] ^= data[i - 22]  # 异或当前字节与22个前的字节
+
+# 将字节转换为字符并打印
+output = &#39;&#39;.join(chr(byte) for byte in data)
+print(&quot;最终结果:&quot;)
+print(output)
+</code></pre>
 <h4 id="Week-3-LittlePuzzle"><a href="#Week-3-LittlePuzzle" class="headerlink" title="[Week 3] LittlePuzzle"></a>[Week 3] LittlePuzzle</h4><p>使用cfr-0.152.jar反编译</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Decompiled with CFR 0.152.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Puzzle</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span>[][] board = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;&#123;<span class="number">5</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>&#125;, &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">7</span>&#125;, &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;, &#123;<span class="number">7</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">1</span>&#125;, &#123;<span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">9</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">exit</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;\u89e3\u8c1c\u5931\u8d25&quot;</span>);</span><br><span class="line">        System.exit(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">check</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> n2)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n3;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n4</span> <span class="operator">=</span> board[n][n2];</span><br><span class="line">        <span class="type">int</span> <span class="variable">n5</span> <span class="operator">=</span> n - n % <span class="number">3</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n6</span> <span class="operator">=</span> n2 - n2 % <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (n3 = <span class="number">0</span>; n3 &lt; <span class="number">9</span>; ++n3) &#123;</span><br><span class="line">            <span class="keyword">if</span> (n3 == n || n3 == n2 || n4 != board[n][n3] &amp;&amp; n4 != board[n3][n2]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (n3 = <span class="number">0</span>; n3 &lt; <span class="number">3</span>; ++n3) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (n5 + n3 == n || n6 + i == n2 || n4 != board[n5 + n3][n6 + i]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> String <span class="title function_">flag</span><span class="params">(String string)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">stringBuilder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; string.length(); i += <span class="number">6</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> Integer.parseInt(string.substring(i, i + <span class="number">6</span>));</span><br><span class="line">            stringBuilder.append(Integer.toHexString(n));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stringBuilder.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] stringArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        <span class="type">int</span> n2;</span><br><span class="line">        System.out.println(<span class="string">&quot;\u8bf7\u8f93\u5165\u4f60\u7684\u89e3\u8c1c\u7ed3\u679c:&quot;</span>);</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">String</span> <span class="variable">string</span> <span class="operator">=</span> scanner.nextLine();</span><br><span class="line">        scanner.close();</span><br><span class="line">        <span class="keyword">if</span> (string.length() != <span class="number">48</span>) &#123;</span><br><span class="line">            Puzzle.exit();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n3</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (n2 = <span class="number">0</span>; n2 &lt; <span class="number">9</span>; ++n2) &#123;</span><br><span class="line">            <span class="keyword">for</span> (n = <span class="number">0</span>; n &lt; <span class="number">9</span>; ++n) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[n2][n] != <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">n4</span> <span class="operator">=</span> string.charAt(n3) - <span class="number">48</span>;</span><br><span class="line">                <span class="keyword">if</span> (n4 &gt; <span class="number">0</span> &amp;&amp; n4 &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">                    Puzzle.board[n2][n] = n4;</span><br><span class="line">                    ++n3;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                Puzzle.exit();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (n2 = <span class="number">0</span>; n2 &lt; <span class="number">9</span>; ++n2) &#123;</span><br><span class="line">            <span class="keyword">for</span> (n = <span class="number">0</span>; n &lt; <span class="number">9</span>; ++n) &#123;</span><br><span class="line">                <span class="keyword">if</span> (Puzzle.check(n2, n)) <span class="keyword">continue</span>;</span><br><span class="line">                Puzzle.exit();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;0xGame&#123;%s&#125;&quot;</span>, Puzzle.flag(string)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+ * Decompiled with CFR 0.152.
+ */
+import java.util.Scanner;
 
-<p>chatgpt问了一遍后发现这是数独游戏，在线找个解密器即可</p>
-<h2 id="BuildCTF"><a href="#BuildCTF" class="headerlink" title="BuildCTF"></a>BuildCTF</h2><h4 id="pyc"><a href="#pyc" class="headerlink" title="pyc"></a>pyc</h4><p><a target="_blank" rel="noopener" href="https://www.pylingual.io/">PyLingual</a>即可反编译，得到源文件之后对应加密写一个decode函数即可。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">decode</span>(<span class="params">message</span>):</span><br><span class="line">    s = base64.b64decode(message)</span><br><span class="line">    decoded_message = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> byte <span class="keyword">in</span> s:</span><br><span class="line">        <span class="comment"># Reverse the encoding steps</span></span><br><span class="line">        x = byte - <span class="number">16</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">            x += <span class="number">256</span></span><br><span class="line">        x = x ^ <span class="number">32</span></span><br><span class="line">        decoded_message += <span class="built_in">chr</span>(x)</span><br><span class="line">    <span class="keyword">return</span> decoded_message</span><br></pre></td></tr></table></figure>
+public class Puzzle &#123;
+    static int[][] board = new int[][]&#123;&#123;5, 7, 0, 9, 4, 0, 8, 0, 0&#125;, &#123;0, 0, 8, 0, 3, 0, 0, 0, 5&#125;, &#123;0, 1, 0, 2, 0, 0, 0, 3, 7&#125;, &#123;0, 0, 9, 7, 2, 0, 0, 0, 0&#125;, &#123;7, 3, 4, 0, 0, 8, 0, 0, 0&#125;, &#123;0, 0, 0, 0, 0, 0, 7, 5, 1&#125;, &#123;3, 0, 0, 0, 1, 4, 2, 0, 0&#125;, &#123;0, 6, 0, 0, 0, 2, 0, 4, 0&#125;, &#123;0, 2, 7, 0, 0, 9, 5, 0, 0&#125;&#125;;
 
-<h4 id="晴窗细乳戏分茶"><a href="#晴窗细乳戏分茶" class="headerlink" title="晴窗细乳戏分茶"></a>晴窗细乳戏分茶</h4><p>程序采用了TEA加密算法，逆向操作进行解密就行，但是好像遇到一个问题是用python写的解密脚本运行是错误的，好像因为原程序使用的是uint32_t，使用python脚本会导致数据非常大，但是C语言写会因为溢出等原因出来正确数据</p>
-<p><img src="/images/41d1a87242b8463d441bcc83e01987d39f7c837f.png"></p>
-<p>用c语言写的程序可以跑起来 </p>
-<p>第一部分：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdint.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line">void decrypt(uint32_t *v, uint32_t *k) &#123;</span><br><span class="line">    uint32_t <span class="built_in">sum</span> = -<span class="number">1640531527</span> * <span class="number">32</span>;</span><br><span class="line">    uint32_t v0 = v[<span class="number">0</span>];</span><br><span class="line">    uint32_t v1 = v[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; ++i) &#123;</span><br><span class="line">        v1 -= (v0 + <span class="built_in">sum</span>) ^ (<span class="number">16</span> * v0 + k[<span class="number">2</span>]) ^ ((v0 &gt;&gt; <span class="number">5</span>) + k[<span class="number">3</span>]);</span><br><span class="line">        v0 -= (v1 + <span class="built_in">sum</span>) ^ (<span class="number">16</span> * v1 + k[<span class="number">0</span>]) ^ ((v1 &gt;&gt; <span class="number">5</span>) + k[<span class="number">1</span>]);</span><br><span class="line">        <span class="built_in">sum</span> += <span class="number">1640531527</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v[<span class="number">0</span>] = v0;</span><br><span class="line">    v[<span class="number">1</span>] = v1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void to_string(uint32_t v0, uint32_t v1, char *output) &#123;</span><br><span class="line">    uint32_t values[<span class="number">2</span>] = &#123;v0, v1&#125;;</span><br><span class="line">    memcpy(output, values, sizeof(values));</span><br><span class="line">    output[<span class="number">8</span>] = <span class="string">&#x27;\0&#x27;</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> main() &#123;</span><br><span class="line">    uint32_t enc[<span class="number">6</span>] ;</span><br><span class="line">    enc[<span class="number">0</span>] = -<span class="number">1559465970</span>;</span><br><span class="line">    enc[<span class="number">1</span>] = -<span class="number">158607645</span>;</span><br><span class="line">    enc[<span class="number">2</span>] = -<span class="number">1059812880</span>;</span><br><span class="line">    enc[<span class="number">3</span>] = <span class="number">314506021</span>;</span><br><span class="line">    enc[<span class="number">4</span>] = -<span class="number">2131835469</span>;</span><br><span class="line">    enc[<span class="number">5</span>] = <span class="number">731233488</span>;</span><br><span class="line">    uint32_t key[<span class="number">4</span>] = &#123;<span class="number">1646625</span>, <span class="number">164438</span>, <span class="number">164439</span>, <span class="number">2631985</span>&#125;;</span><br><span class="line">    uint32_t ena[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> a=<span class="number">0</span>;a&lt;<span class="number">6</span>;a+=<span class="number">2</span>)&#123;</span><br><span class="line">        ena[<span class="number">0</span>] = enc[a];</span><br><span class="line">        ena[<span class="number">1</span>] = enc[a+<span class="number">1</span>];</span><br><span class="line">        decrypt(ena, key);</span><br><span class="line">        char result[<span class="number">9</span>]; </span><br><span class="line">        to_string(ena[<span class="number">0</span>], ena[<span class="number">1</span>], result);</span><br><span class="line">        printf(<span class="string">&quot;%s&quot;</span>, result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    public static void exit() &#123;
+        System.out.println(&quot;\u89e3\u8c1c\u5931\u8d25&quot;);
+        System.exit(1);
+    &#125;
 
-<p>第二部分同理</p>
+    public static boolean check(int n, int n2) &#123;
+        int n3;
+        int n4 = board[n][n2];
+        int n5 = n - n % 3;
+        int n6 = n2 - n2 % 3;
+        for (n3 = 0; n3 &lt; 9; ++n3) &#123;
+            if (n3 == n || n3 == n2 || n4 != board[n][n3] &amp;&amp; n4 != board[n3][n2]) continue;
+            return false;
+        &#125;
+        for (n3 = 0; n3 &lt; 3; ++n3) &#123;
+            for (int i = 0; i &lt; 3; ++i) &#123;
+                if (n5 + n3 == n || n6 + i == n2 || n4 != board[n5 + n3][n6 + i]) continue;
+                return false;
+            &#125;
+        &#125;
+        return true;
+    &#125;
+
+    static String flag(String string) &#123;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i &lt; string.length(); i += 6) &#123;
+            int n = Integer.parseInt(string.substring(i, i + 6));
+            stringBuilder.append(Integer.toHexString(n));
+        &#125;
+        return stringBuilder.toString();
+    &#125;
+
+    public static void main(String[] stringArray) &#123;
+        int n;
+        int n2;
+        System.out.println(&quot;\u8bf7\u8f93\u5165\u4f60\u7684\u89e3\u8c1c\u7ed3\u679c:&quot;);
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        scanner.close();
+        if (string.length() != 48) &#123;
+            Puzzle.exit();
+        &#125;
+        int n3 = 0;
+        for (n2 = 0; n2 &lt; 9; ++n2) &#123;
+            for (n = 0; n &lt; 9; ++n) &#123;
+                if (board[n2][n] != 0) continue;
+                int n4 = string.charAt(n3) - 48;
+                if (n4 &gt; 0 &amp;&amp; n4 &lt;= 9) &#123;
+                    Puzzle.board[n2][n] = n4;
+                    ++n3;
+                    continue;
+                &#125;
+                Puzzle.exit();
+            &#125;
+        &#125;
+        for (n2 = 0; n2 &lt; 9; ++n2) &#123;
+            for (n = 0; n &lt; 9; ++n) &#123;
+                if (Puzzle.check(n2, n)) continue;
+                Puzzle.exit();
+            &#125;
+        &#125;
+        System.out.println(String.format(&quot;0xGame
+</code></pre>
 
     </div>
-
     
     
     
+    
+    
+    
+    
+</div>
 
-      <footer class="post-footer">
-
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 songhahaha的个人博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;songhahaha
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
         
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" rel="next" title="题目复现和一些加密算法">
-      题目复现和一些加密算法 <i class="fa fa-chevron-right"></i>
-    </a></div>
     </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+</footer>
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0xgame%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">0xgame题目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Week-3-BabyASM"><span class="nav-number">1.0.1.</span> <span class="nav-text">[Week 3] BabyASM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Week-3-LittlePuzzle"><span class="nav-number">1.0.2.</span> <span class="nav-text">[Week 3] LittlePuzzle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BuildCTF"><span class="nav-number">2.</span> <span class="nav-text">BuildCTF</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pyc"><span class="nav-number">2.0.1.</span> <span class="nav-text">pyc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%B4%E7%AA%97%E7%BB%86%E4%B9%B3%E6%88%8F%E5%88%86%E8%8C%B6"><span class="nav-number">2.0.2.</span> <span class="nav-text">晴窗细乳戏分茶</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">songhahaha</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">songhahaha</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
+    <script src="/js/main.js"></script>
+    
+    
 
 
 
 
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+    
 </body>
 </html>

