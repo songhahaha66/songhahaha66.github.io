@@ -172,6 +172,7 @@
     <div class="content" v-pre>
         <h1 id="主站题目"><a href="#主站题目" class="headerlink" title="主站题目"></a>主站题目</h1><span id="more"></span>
 
+<h2 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h2><p>主要还是对so文件的逆向分析。</p>
 <h2 id="easy-py-cpython-38"><a href="#easy-py-cpython-38" class="headerlink" title="easy_py.cpython-38"></a>easy_py.cpython-38</h2><p>注意线程1执行的时候对flag的修改不会似乎同步到线程2，线程2异或的下一个值仍为修改前的值。</p>
 <pre><code class="python">Happy = [44, 100, 3, 50, 106, 90, 5, 102, 10, 112]
 result = [0]*10
@@ -278,6 +279,34 @@ print(str)
 <p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241206231009310.png" alt="image-20241206231009310"></p>
 <h1 id="NSSCTF题目"><a href="#NSSCTF题目" class="headerlink" title="NSSCTF题目"></a>NSSCTF题目</h1><!--more-->
 
+<h2 id="CISCN-2022-东北-crackme-Android"><a href="#CISCN-2022-东北-crackme-Android" class="headerlink" title="[CISCN 2022 东北]crackme_Android"></a>[CISCN 2022 东北]crackme_Android</h2><pre><code class="java"> public boolean check(CharSequence flag) &#123;
+        if (flag.length() != 38 || !flag.subSequence(0, 5).toString().equals(&quot;flag&#123;&quot;) || flag.charAt(flag.length() - 1) != &#39;&#125;&#39;) &#123;
+            return false;
+        &#125;
+        CharSequence data = flag.subSequence(5, flag.length() - 1);
+        StringBuilder sumval = new StringBuilder();
+        for (int i = 0; i &lt; data.length(); i += 4) &#123;
+            sumval.append(md5(data.subSequence(i, i + 4).toString()));
+        &#125;
+        return sumval.toString().equals(&quot;8393931a16db5a00f464a24abe24b17a9040b57d9cb2cbfa6bdc61d12e9b51f2789e8a8ae9406c969118e75e9bc65c4327fbc7c3accdf2c54675b0ddf3e0a6099b1b81046d525495e3a14ff6eae76eddfa1740cd6bd483da0f7684b2e4ec84b371f07bf95f0113eefab12552181dd832af8d1eb220186400c494db7091e402b0&quot;);
+    &#125;
+
+</code></pre>
+<p>应该是，每4位分别进行md5加密的。分成8组。找个在线网站就能解密</p>
+<p>4aea146e9dc7365e4ec931f547284822</p>
+<p>很简单。</p>
+<h2 id="SWPUCTF-2021-新生赛-easyapp"><a href="#SWPUCTF-2021-新生赛-easyapp" class="headerlink" title="[SWPUCTF 2021 新生赛]easyapp"></a>[SWPUCTF 2021 新生赛]easyapp</h2><p>一开始就看见了这个。但是用这个key写脚本并不正确，后来发现后续对key进行了修改</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241224230208658.png" alt="image-20241224230208658"></p>
+<p>修改成了987654321</p>
+<p><img src="/images/reverse%E9%A2%98%E7%9B%AE/image-20241224230322729.png" alt="image-20241224230322729"></p>
+<p>得到了flag：NSSCTF{apkYYDS}</p>
+<pre><code class="py">aa = &quot;棿棢棢棲棥棷棊棐棁棚棨棨棵棢棌&quot;
+c=0
+for i in aa:
+    c = ord(i)
+    c^=987654321
+    print(chr(c&amp;0xff),end=&quot;&quot;)
+</code></pre>
 <h2 id="GXYCTF-2019-luck-guy"><a href="#GXYCTF-2019-luck-guy" class="headerlink" title="[GXYCTF 2019]luck_guy"></a>[GXYCTF 2019]luck_guy</h2><p>动态调试就可以，把流程走一遍</p>
 <p>GXY{do_not_hate_me}</p>
 <h2 id="HZNUCTF-2023-final-虽然他送了我玫瑰花"><a href="#HZNUCTF-2023-final-虽然他送了我玫瑰花" class="headerlink" title="[HZNUCTF 2023 final]虽然他送了我玫瑰花"></a>[HZNUCTF 2023 final]虽然他送了我玫瑰花</h2><p>花指令</p>
@@ -977,7 +1006,7 @@ print(flag)
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2024 songhahaha的个人博客
+            2024 - 2025 songhahaha的个人博客
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
