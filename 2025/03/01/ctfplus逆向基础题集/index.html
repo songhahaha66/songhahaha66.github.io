@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>songhahaha的个人博客</title>
+    <title> | songhahaha的个人博客</title>
     <meta name="author" content="songhahaha" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,7 +42,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -152,40 +154,11 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/background.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>songhahaha的个人博客</h1>
-                <h3>songhahaha</h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1></h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    class="home-posts-wrap-no-card"
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2025/03/01/ctfplus%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80%E9%A2%98%E9%9B%86/">
-        <h2 class="post-title"></h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -195,10 +168,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="simple1"><a href="#simple1" class="headerlink" title="simple1"></a>simple1</h1><p>先输入Name，sprintf将Name与v7异或后存在Buffer</p>
+    
+    <div class="content" v-pre>
+        <h1 id="simple1"><a href="#simple1" class="headerlink" title="simple1"></a>simple1</h1><p>先输入Name，sprintf将Name与v7异或后存在Buffer</p>
 <p>之后输入Serial，比较Serial与Buffer。</p>
 <p>已知Serial为5B134977135E7D13</p>
 <p>经过测试发现v7并不是IDA分析给出的  qmemcpy(v7, “ 0”, sizeof(v7));</p>
@@ -388,278 +360,13 @@ print(&#39;&#39;.join(re))
 <p>注意一下这里也定义了数组内容。</p>
 <p>Geesec{4fc5f0e3e2e199a0a6ddd945aa2dfeda}</p>
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2025/03/01/ctfplus%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80%E9%A2%98%E9%9B%86/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2025/03/01/%E7%AD%94%E8%BE%A9/">
-        <h2 class="post-title"></h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2025/3/1
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><p>[学习内容]</p>
-<p>一些加密算法：RC4，TEA（XTEA，XXTEA）</p>
-<p>编码算法：base64等。</p>
-<p>花指令去除<a target="_blank" rel="noopener" href="https://songhahaha.top/2025/02/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E8%B5%9B%E5%88%9D%E8%B5%9B/">2025软件安全攻防赛初赛 | songhahaha的个人博客</a></p>
-<p>upx脱壳（工具脱壳，手动脱壳）<a target="_blank" rel="noopener" href="https://songhahaha.top/2025/02/25/hgame%E5%A4%8D%E7%8E%B0/">hgame题目复现 | songhahaha的个人博客</a></p>
-<p>[工具使用]</p>
-<p>IDA，x64dbg，JADX等</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p><img src="/images/%E7%AD%94%E8%BE%A9/image-20250301164853354.png!%5Bimage-20250301164910081%5D(images/%E7%AD%94%E8%BE%A9/image-20250301164910081.png" alt="image-20250301164853354"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2025/03/01/%E7%AD%94%E8%BE%A9/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2025/02/25/hgame%E5%A4%8D%E7%8E%B0/">
-        <h2 class="post-title">hgame题目复现</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2025/2/25
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="Turtle"><a href="#Turtle" class="headerlink" title="Turtle"></a>Turtle</h1>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2025/02/25/hgame%E5%A4%8D%E7%8E%B0/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2025/02/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E8%B5%9B%E5%88%9D%E8%B5%9B/">
-        <h2 class="post-title">2025软件安全攻防赛初赛</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2025/2/24
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="donntyousee"><a href="#donntyousee" class="headerlink" title="donntyousee"></a>donntyousee</h1><p>赛后复现。</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2025/02/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E8%B5%9B%E5%88%9D%E8%B5%9B/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/12/16/2024HECTF/">
-        <h2 class="post-title">2024HECTF题解</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/12/16
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>ID:songhahaha</p>
-<p>校外排名：9</p>
-<p>解出题目数量：17</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/12/16/2024HECTF/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/">
-        <h2 class="post-title">IDA快捷键</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/11/7
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>shift+E可以提取数组数据</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/11/07/reverse%E9%A2%98%E7%9B%AE/">
-        <h2 class="post-title">一些题目记录整理</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/11/7
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="主站题目"><a href="#主站题目" class="headerlink" title="主站题目"></a>主站题目</h1>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/11/07/reverse%E9%A2%98%E7%9B%AE/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/">
-        <h2 class="post-title">题目复现和一些加密算法</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/10/26
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h2 id="2024螺丝新生赛"><a href="#2024螺丝新生赛" class="headerlink" title="2024螺丝新生赛"></a>2024螺丝新生赛</h2>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
-        <h2 class="post-title">一些Reverse新生赛题目</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/10/22
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h2 id="0xgame题目"><a href="#0xgame题目" class="headerlink" title="0xgame题目"></a>0xgame题目</h2>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
-    
-    <span class="current">1</span>
     
     
     
     
-</div>
-
-    </div>
+    
+    
     
 </div>
 
@@ -691,6 +398,12 @@ print(&#39;&#39;.join(re))
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
