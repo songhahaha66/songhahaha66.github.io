@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title> | songhahaha的个人博客</title>
+    <title>ctfplus逆向基础题集 | songhahaha的个人博客</title>
     <meta name="author" content="songhahaha" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -156,7 +156,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1></h1>
+        <h1>ctfplus逆向基础题集</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -170,7 +170,9 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="simple1"><a href="#simple1" class="headerlink" title="simple1"></a>simple1</h1><p>先输入Name，sprintf将Name与v7异或后存在Buffer</p>
+        <h1 id="simple1"><a href="#simple1" class="headerlink" title="simple1"></a>simple1</h1><span id="more"></span>
+
+<p>先输入Name，sprintf将Name与v7异或后存在Buffer</p>
 <p>之后输入Serial，比较Serial与Buffer。</p>
 <p>已知Serial为5B134977135E7D13</p>
 <p>经过测试发现v7并不是IDA分析给出的  qmemcpy(v7, “ 0”, sizeof(v7));</p>
