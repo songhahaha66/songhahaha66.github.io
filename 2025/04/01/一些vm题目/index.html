@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title> | songhahaha的个人博客</title>
+    <meta name="author" content="songhahaha" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>SONGHAHAHA的个人博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SONGHAHAHA的个人博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1></h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/4/1
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>vm题目记录</p>
+<hr>
+<p>这里说的vm指的是出题人通过实现一个小型的虚拟机，把程序的代码转换为程序设计者自定义的操作码（opcode）然后在程序执行时通过解释操作码，执行对应的函数，从而实现程序原有的功能。</p>
+<span id="more"></span>
+
+<h1 id="螺丝主站"><a href="#螺丝主站" class="headerlink" title="螺丝主站"></a>螺丝主站</h1><h2 id="vm0"><a href="#vm0" class="headerlink" title="vm0"></a>vm0</h2><p><img src="/images/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E9%A2%98%E7%9B%AE/image-20250401100044183.png" alt="image-20250401100044183"></p>
+<p>先在这里进行了初始化，将opcode跟函数关联起来。</p>
+<pre><code class="c++">void *vm_init()
+&#123;
+vm_vpu *cpu;
+cpu-&gt;r1 = 0;
+cpu-&gt;r2 = 0;
+cpu-&gt;r3 = 0;
+cpu-&gt;eip = (unsigned char *)vm_code;//将eip指向opcode的地址
+cpu-&gt;op_list[0].opcode = 0xf1;
+cpu-&gt;op_list[0].handle = (void (*)(void *))mov;//将操作字节码与对应的handle函数关联在一起
+cpu-&gt;op_list[1].opcode = 0xf2;
+cpu-&gt;op_list[1].handle = (void (*)(void *))xor;
+cpu-&gt;op_list[2].opcode = 0xf5;
+cpu-&gt;op_list[2].handle = (void (*)(void *))read_;
+vm_stack = malloc(0x512);
+memset(vm_stack,0,0x512);//定义了一个新栈并在malloc上申请了0x512位的空间
+</code></pre>
+<p><img src="/images/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E9%A2%98%E7%9B%AE/image-20250401100238225.png" alt="image-20250401100238225"></p>
+<p>之后是入口函数。</p>
+<pre><code class="c++">void vm_start(vm_cpu *cpu)
+&#123;
+cpu-&gt;eip = (unsigned char*)opcodes;//eip指向要被解释的opcode地址
+while((*cpu-&gt;eip) != 0xf4)//如果opcode不为RET，就调用vm_dispatcher来解释执行
+&#123;
+vm_dispatcher(*cpu-&gt;eip)
+&#125;
+</code></pre>
+<p>再之后就是vm_dispatcher</p>
+<p><img src="/images/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E9%A2%98%E7%9B%AE/image-20250401100534108.png" alt="image-20250401100534108"></p>
+<pre><code class="c++">void vm_dispatcher(vm_cpu *cpu)
+&#123;
+int j;
+for(j=0;j&lt;OPCODE_N;j++)
+&#123;
+if(*cpu-&gt;eip ==cpu-&gt;op_list[i].opcode)
+&#123;
+cpu-&gt;op_list[i].handle(cpu);
+break;
+&#125;
+&#125;
+&#125;
+</code></pre>
+<p>之后便是具体函数的实现。</p>
+<p>现在来具体分析该题：</p>
+<table>
+<thead>
+<tr>
+<th>opcode</th>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0xf1</td>
+<td>sub_564114800B5F</td>
+<td>移动数据到寄存器</td>
+</tr>
+<tr>
+<td>0xf2</td>
+<td>sub_564114800A64</td>
+<td>r0&#x3D;r0^r1</td>
+</tr>
+<tr>
+<td>0xf5</td>
+<td>sub_564114800AC5</td>
+<td>判断输入长度是否为20</td>
+</tr>
+<tr>
+<td>0xf4</td>
+<td>sub_564114800956</td>
+<td>无作用，跳转到下一条指令</td>
+</tr>
+<tr>
+<td>0xf7</td>
+<td>sub_564114800A08</td>
+<td>r0&#x3D;r0*r3</td>
+</tr>
+<tr>
+<td>0xf8</td>
+<td>sub_5641148008F0</td>
+<td>交换r0和r1数据</td>
+</tr>
+<tr>
+<td>0xf6</td>
+<td>sub_56411480099C</td>
+<td>r0&#x3D;r2+2*r1+3*r0</td>
+</tr>
+</tbody></table>
+<p>接下来写一个脚本来模拟一下程序。</p>
+<p>脚本如下：</p>
+<pre><code class="python">from sympy.strategies.core import switch
+
+mycode = [
+    0xF5, 0xF1, 0xE1, 0x00, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x20, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x01, 0x00, 0x00,
+    0x00, 0xF2, 0xF1, 0xE4, 0x21, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x02, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x22, 0x00,
+    0x00, 0x00, 0xF1, 0xE1, 0x03, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x23, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x04, 0x00,
+    0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x24, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x05, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x25,
+    0x00, 0x00, 0x00, 0xF1, 0xE1, 0x06, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x26, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x07,
+    0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x27, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x08, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x28, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x09, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x29, 0x00, 0x00, 0x00, 0xF1, 0xE1,
+    0x0A, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x2A, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0B, 0x00, 0x00, 0x00, 0xF2, 0xF1,
+    0xE4, 0x2B, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0C, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x2C, 0x00, 0x00, 0x00, 0xF1,
+    0xE1, 0x0D, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x2D, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0E, 0x00, 0x00, 0x00, 0xF2,
+    0xF1, 0xE4, 0x2E, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0F, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x2F, 0x00, 0x00, 0x00,
+    0xF1, 0xE1, 0x10, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x30, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x11, 0x00, 0x00, 0x00,
+    0xF2, 0xF1, 0xE4, 0x31, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x12, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x32, 0x00, 0x00,
+    0x00, 0xF1, 0xE1, 0x13, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4, 0x33, 0x00, 0x00, 0x00, 0xF4, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0xF5, 0xF1, 0xE1, 0x00, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x01, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x00, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x01, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x02, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x01, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x02, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x03, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x02, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x03, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x04, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x03, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x04, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x05, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x04, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x05, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x06, 0x00, 0x00, 0x00, 0xF2, 0xF1, 0xE4,
+    0x05, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x06, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x07, 0x00, 0x00, 0x00, 0xF1, 0xE3, 0x08,
+    0x00, 0x00, 0x00, 0xF1, 0xE5, 0x0C, 0x00, 0x00, 0x00, 0xF6, 0xF7, 0xF1, 0xE4, 0x06, 0x00, 0x00, 0x00, 0xF1, 0xE1,
+    0x07, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x08, 0x00, 0x00, 0x00, 0xF1, 0xE3, 0x09, 0x00, 0x00, 0x00, 0xF1, 0xE5, 0x0C,
+    0x00, 0x00, 0x00, 0xF6, 0xF7, 0xF1, 0xE4, 0x07, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x08, 0x00, 0x00, 0x00, 0xF1, 0xE2,
+    0x09, 0x00, 0x00, 0x00, 0xF1, 0xE3, 0x0A, 0x00, 0x00, 0x00, 0xF1, 0xE5, 0x0C, 0x00, 0x00, 0x00, 0xF6, 0xF7, 0xF1,
+    0xE4, 0x08, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0D, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x13, 0x00, 0x00, 0x00, 0xF8, 0xF1,
+    0xE4, 0x0D, 0x00, 0x00, 0x00, 0xF1, 0xE7, 0x13, 0x00, 0x00, 0x00, 0xF1, 0xE1, 0x0E, 0x00, 0x00, 0x00, 0xF1, 0xE2,
+    0x12, 0x00, 0x00, 0x00, 0xF8, 0xF1, 0xE4, 0x0E, 0x00, 0x00, 0x00, 0xF1, 0xE7, 0x12, 0x00, 0x00, 0x00, 0xF1, 0xE1,
+    0x0F, 0x00, 0x00, 0x00, 0xF1, 0xE2, 0x11, 0x00, 0x00, 0x00, 0xF8, 0xF1, 0xE4, 0x0F, 0x00, 0x00, 0x00, 0xF1, 0xE7,
+    0x11, 0x00, 0x00, 0x00, 0xF4
+]
+for i in range(len(mycode)):
+    if mycode[i] == 0xF1:
+        match mycode[i + 1]:
+            case 0xE1:
+                print(f&quot;r0=input[&#123;mycode[i + 2]&#125;]&quot;)
+            case 0xE2:
+                print(f&quot;r1=input[&#123;mycode[i + 2]&#125;]&quot;)
+            case 0xE3:
+                print(f&quot;r2=input[&#123;mycode[i + 2]&#125;]&quot;)
+            case 0xE4:
+                print(f&quot;input[&#123;mycode[i + 2]&#125;]=r0&quot;)
+            case 0xE5:
+                print(f&quot;r3=input[&#123;mycode[i + 2]&#125;]&quot;)
+            case 0xE7:
+                print(f&quot;input[&#123;mycode[i + 2]&#125;]=r1&quot;)
+    if mycode[i] == 0xF4:
+        pass
+    if mycode[i] == 0xF2:
+        print(&quot;r0=r0^r1&quot;)
+    if mycode[i] == 0xF5:
+        print(&quot;判断输入是否为20&quot;)
+    if mycode[i] == 0xF7:
+        print(&quot;r0=r0*r1&quot;)
+    if mycode[i] == 0xF6:
+        print(&quot;r0=r2+2*r1+3*r0&quot;)
+    if mycode[i] == 0xF8:
+        print(&quot;交换r0和r1&quot;)
+</code></pre>
+<p>执行结果：</p>
+<pre><code>判断输入是否为20
+r0=input[0]
+r0=r0^r1
+input[32]=r0
+r0=input[1]
+r0=r0^r1
+input[33]=r0
+r0=input[2]
+r0=r0^r1
+input[34]=r0
+r0=input[3]
+r0=r0^r1
+input[35]=r0
+r0=input[4]
+r0=r0^r1
+input[36]=r0
+r0=input[5]
+r0=r0^r1
+input[37]=r0
+r0=input[6]
+r0=r0^r1
+input[38]=r0
+r0=input[7]
+r0=r0^r1
+input[39]=r0
+r0=input[8]
+r0=r0^r1
+input[40]=r0
+r0=input[9]
+r0=r0^r1
+input[41]=r0
+r0=input[10]
+r0=r0^r1
+input[42]=r0
+r0=input[11]
+r0=r0^r1
+input[43]=r0
+r0=input[12]
+r0=r0^r1
+input[44]=r0
+r0=input[13]
+r0=r0^r1
+input[45]=r0
+r0=input[14]
+r0=r0^r1
+input[46]=r0
+r0=input[15]
+r0=r0^r1
+input[47]=r0
+r0=input[16]
+r0=r0^r1
+input[48]=r0
+r0=input[17]
+r0=r0^r1
+input[49]=r0
+r0=input[18]
+r0=r0^r1
+input[50]=r0
+r0=input[19]
+r0=r0^r1
+input[51]=r0
+判断输入是否为20
+r0=input[0]
+r1=input[1]
+r0=r0^r1
+input[0]=r0
+r0=input[1]
+r1=input[2]
+r0=r0^r1
+input[1]=r0
+r0=input[2]
+r1=input[3]
+r0=r0^r1
+input[2]=r0
+r0=input[3]
+r1=input[4]
+r0=r0^r1
+input[3]=r0
+r0=input[4]
+r1=input[5]
+r0=r0^r1
+input[4]=r0
+r0=input[5]
+r1=input[6]
+r0=r0^r1
+input[5]=r0
+r0=input[6]
+r1=input[7]
+r2=input[8]
+r3=input[12]
+r0=r2+2*r1+3*r0
+r0=r0*r3
+input[6]=r0
+r0=input[7]
+r1=input[8]
+r2=input[9]
+r3=input[12]
+r0=r2+2*r1+3*r0
+r0=r0*r3
+input[7]=r0
+
+r0=input[8]
+r1=input[9]
+r2=input[10]
+r3=input[12]
+r0=r2+2*r1+3*r0
+r0=r0*r3
+input[8]=r0
+
+r0=input[13]
+r1=input[19]
+交换r0和r1
+input[13]=r0
+input[19]=r1
+r0=input[14]
+r1=input[18]
+交换r0和r1
+input[14]=r0
+input[18]=r1
+r0=input[15]
+r1=input[17]
+交换r0和r1
+input[15]=r0
+input[17]=r1
+</code></pre>
+<p>r1初始值为18，第一段对其进行了异或。第一段解密如下：</p>
+<p><img src="/images/%E8%BF%91%E6%9C%9F%E4%B8%80%E4%BA%9B%E9%A2%98%E7%9B%AE/image-20250401115010441.png" alt="image-20250401115010441"></p>
+<p>是错的。</p>
+<p>第二段呢。</p>
+<p>第二段进行了连续异或，然后进行了数学运算，然后进行了交换。</p>
+<p>解密脚本如下：</p>
+<pre><code class="python">def swapPositions(list, pos1, pos2):
+    list[pos1], list[pos2] = list[pos2], list[pos1]
+    return list
+enc_data = [0x69, 0x45, 0x2A, 0x37, 0x09, 0x17, 0xC5, 0x0B, 0x5C, 0x72,
+  0x33, 0x76, 0x33, 0x21, 0x74, 0x31, 0x5F, 0x33, 0x73, 0x72]
+enc_data = swapPositions(enc_data,15,17)
+enc_data = swapPositions(enc_data,14,18)
+enc_data = swapPositions(enc_data,13,19)
+r3 = enc_data[12]
+for i in range(30,128):
+    if enc_data[8]==(r3*(i*3+2*enc_data[9]+enc_data[10]))&amp;0xff:
+        enc_data[8]=i
+        break
+for i in range(30,128):
+    if enc_data[7]==(r3*(i*3+2*enc_data[8]+enc_data[9]))&amp;0xff:
+        enc_data[7]=i
+        break
+for i in range(30,128):
+    if enc_data[6]==(r3*(i*3+2*enc_data[7]+enc_data[8]))&amp;0xff:
+        enc_data[6]=i
+        break
+for i in range(5,-1,-1):
+    enc_data[i]^=enc_data[i+1]
+for i in range(len(enc_data)):
+    print(chr(enc_data[i]),end=&quot;&quot;)
+#Y0u_hav3_r3v3rs3_1t!
+</code></pre>
+<p>即得到最终答案</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2025 songhahaha的个人博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;songhahaha
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
