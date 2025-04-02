@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | songhahaha的个人博客</title>
+    <title>songhahaha的个人博客</title>
     <meta name="author" content="songhahaha" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -41,6 +41,8 @@
 
 
 
+
+<script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -150,166 +152,82 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
-        
-        <div class="timeline" data-title="一些reverse新生赛题目">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/22</div>
-                <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
-                    <h3>一些Reverse新生赛题目</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/background.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>songhahaha的个人博客</h1>
+                <h3>songhahaha</h3>
+                <h5></h5>
             </div>
-        </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    class="home-posts-wrap-no-card"
+>
+    <div id="home-posts">
         
-        <div class="timeline" data-title="题目复现和一些加密算法">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/26</div>
-                <a href="/2024/10/26/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/">
-                    <h3>题目复现和一些加密算法</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
+
+<div class="post">
+    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/">
+        <h2 class="post-title">一些Reverse新生赛题目</h2>
+    </a>
+    <div class="category-and-date">
         
-        <div class="timeline" data-title="一些题目记录整理">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/11/7</div>
-                <a href="/2024/11/07/reverse%E9%A2%98%E7%9B%AE/">
-                    <h3>一些题目记录整理</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/22
+        </span>
         
-        <div class="timeline" data-title="ida快捷键">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/11/7</div>
-                <a href="/2024/11/07/IDA%E4%BD%BF%E7%94%A8/">
-                    <h3>IDA快捷键</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="2024hectf题解">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/12/16</div>
-                <a href="/2024/12/16/2024HECTF/">
-                    <h3>2024HECTF题解</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="2025软件安全攻防赛初赛">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/2/24</div>
-                <a href="/2025/02/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E8%B5%9B%E5%88%9D%E8%B5%9B/">
-                    <h3>2025软件安全攻防赛初赛</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="hgame题目复现">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/2/25</div>
-                <a href="/2025/02/25/hgame%E5%A4%8D%E7%8E%B0/">
-                    <h3>hgame题目复现</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="入组答辩">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/3/1</div>
-                <a href="/2025/03/01/%E7%AD%94%E8%BE%A9/">
-                    <h3>入组答辩</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="ctfplus逆向基础题集">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/3/1</div>
-                <a href="/2025/03/01/ctfplus%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80%E9%A2%98%E9%9B%86/">
-                    <h3>ctfplus逆向基础题集</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/1</div>
-                <a href="/2025/04/01/%E4%B8%80%E4%BA%9Bvm%E9%A2%98%E7%9B%AE/">
-                    <h3></h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/2</div>
-                <a href="/2025/04/02/%E6%9F%90%E8%AF%88%E9%AA%97%E7%BD%91%E7%AB%99%E5%88%86%E6%9E%90/">
-                    <h3></h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="0xgame题目"><a href="#0xgame题目" class="headerlink" title="0xgame题目"></a>0xgame题目</h2>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/22/%E7%AC%AC%E4%B8%80%E6%AC%A124.10.25/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
 </div>
 
             <footer id="footer">
